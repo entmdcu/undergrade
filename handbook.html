@@ -62,42 +62,52 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #586f40; 
         }
+
+        /* ซ่อน Scrollbar สำหรับเมนูด้านบนบนมือถือแต่ยังปัดได้ */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
         /* Content formatting */
         .handbook-content h2 {
-            font-size: 1.6rem; /* ปรับขนาดให้ใหญ่ขึ้น */
+            font-size: 1.6rem; 
             font-weight: 700;
-            color: #38462b; /* olive-800 */
+            color: #38462b; 
             margin-top: 2.5rem;
             margin-bottom: 1.25rem;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e7ede0; /* olive-100 */
+            border-bottom: 2px solid #e7ede0; 
         }
         .handbook-content h3 {
-            font-size: 1.25rem; /* ปรับขนาดให้ใหญ่ขึ้น */
+            font-size: 1.25rem; 
             font-weight: 600;
-            color: #586f40; /* olive-600 */
+            color: #586f40; 
             margin-top: 1.5rem;
             margin-bottom: 0.5rem;
         }
         .handbook-content p {
             margin-bottom: 0.75rem;
             line-height: 1.8;
-            color: #4b5563; /* gray-600 */
-            font-size: 1.05rem; /* ปรับขนาดให้ใหญ่ขึ้น */
+            color: #4b5563; 
+            font-size: 1.05rem; 
         }
         .handbook-content ul {
             list-style-type: disc;
             padding-left: 1.5rem;
             margin-bottom: 1rem;
             color: #4b5563;
-            font-size: 1.05rem; /* ปรับขนาดให้ใหญ่ขึ้น */
+            font-size: 1.05rem; 
         }
         .handbook-content ol {
             list-style-type: decimal;
             padding-left: 1.5rem;
             margin-bottom: 1rem;
             color: #4b5563;
-            font-size: 1.05rem; /* ปรับขนาดให้ใหญ่ขึ้น */
+            font-size: 1.05rem; 
         }
         .handbook-content li {
             margin-bottom: 0.6rem;
@@ -108,7 +118,7 @@
             border-collapse: collapse;
             width: 100%;
             margin-bottom: 1.5rem;
-            font-size: 1rem; /* ปรับขนาดให้ใหญ่ขึ้นจาก 0.9rem */
+            font-size: 1rem; 
         }
         th {
             background-color: #f5f7f2;
@@ -130,8 +140,22 @@
 </head>
 <body class="text-gray-800 antialiased pb-16">
 
-    <!-- Page Header (ปรับ padding บนลงเนื่องจากเอา Navbar ออก) -->
-    <div class="pt-16 pb-12 bg-olive-50 border-b border-olive-100 relative overflow-hidden">
+    <!-- เมนูด้านบน (Header Navigation) -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-olive-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-start md:justify-center py-3 overflow-x-auto flex-nowrap gap-2 md:gap-4 no-scrollbar">
+                <a href="https://entmdcu.github.io/undergrade/schedule.html" class="text-gray-600 hover:text-olive-800 hover:bg-olive-50 font-medium px-4 py-2 rounded-full transition-colors whitespace-nowrap text-sm md:text-base">ตารางกิจกรรม</a>
+                <!-- ไฮไลท์ที่ปุ่มคู่มือนิสิต -->
+                <a href="https://entmdcu.github.io/undergrade/handbook.html" class="text-olive-800 bg-olive-100 font-medium px-4 py-2 rounded-full transition-colors whitespace-nowrap text-sm md:text-base">คู่มือนิสิต</a>
+                <a href="https://entmdcu.github.io/undergrade/documents.html" class="text-gray-600 hover:text-olive-800 hover:bg-olive-50 font-medium px-4 py-2 rounded-full transition-colors whitespace-nowrap text-sm md:text-base">เอกสารประกอบการเรียน & VDO</a>
+                <a href="https://entmdcu.github.io/undergrade/openchat.html" class="text-gray-600 hover:text-olive-800 hover:bg-olive-50 font-medium px-4 py-2 rounded-full transition-colors whitespace-nowrap text-sm md:text-base">สแกนเข้าร่วมกลุ่ม</a>
+                <a href="https://entmdcu.github.io/undergrade/leave-rules.html" class="text-gray-600 hover:text-olive-800 hover:bg-olive-50 font-medium px-4 py-2 rounded-full transition-colors whitespace-nowrap text-sm md:text-base">ระเบียบการลา</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="pt-12 pb-12 bg-olive-50 border-b border-olive-100 relative overflow-hidden">
         <div class="absolute top-0 right-0 w-64 h-64 bg-olive-200 rounded-full blur-3xl opacity-40 -translate-y-1/2 translate-x-1/3"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="block">
@@ -146,13 +170,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div class="flex flex-col md:flex-row gap-8 lg:gap-10">
             
-            <!-- Sidebar Navigation (Sticky on Desktop) ปรับ top ให้พอดีตอนไม่มี nav -->
+            <!-- Sidebar Navigation (Sticky on Desktop) ปรับ top ให้พอดีตอนมี nav (md:top-24) -->
             <aside class="w-full md:w-1/4 lg:w-1/5 shrink-0">
-                <div class="md:sticky md:top-8 bg-white p-5 rounded-2xl shadow-sm border border-olive-100">
+                <div class="md:sticky md:top-24 bg-white p-5 rounded-2xl shadow-sm border border-olive-100">
                     <h3 class="font-bold text-gray-900 mb-4 text-xl border-b border-olive-100 pb-2">สารบัญเนื้อหา</h3>
-                    <!-- ปรับขนาดตัวหนังสือเมนูให้เป็น text-base ใหญ่ขึ้นจาก text-sm -->
                     <nav class="flex flex-col space-y-2 text-base font-medium">
-                        <!-- เติม class toc-link เพื่อให้ JS ทำงาน -->
                         <a href="#section-document" class="toc-link text-olive-700 bg-olive-50 hover:bg-olive-100 px-3 py-2.5 rounded-lg transition-colors flex items-center justify-between group">
                             <span class="flex items-center gap-2"><i data-lucide="file-text" class="w-4 h-4"></i> เอกสารต้นฉบับ (PDF)</span>
                         </a>
@@ -183,10 +205,11 @@
             </aside>
 
             <!-- Handbook Detail -->
+            <!-- ปรับเป็น scroll-mt-24 ในทุก section เพื่อหลบ Navbar เวลาเลื่อน -->
             <main class="w-full md:w-3/4 lg:w-4/5 bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-olive-100 handbook-content">
                 
                 <!-- Section: Document Embed -->
-                <section id="section-document" class="scroll-mt-10 mb-12">
+                <section id="section-document" class="scroll-mt-24 mb-12">
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
                         <h2 class="mt-0 border-none pb-0 text-2xl flex items-center gap-3">
                             <i data-lucide="file-text" class="w-8 h-8 text-olive-600"></i> เอกสารคู่มือต้นฉบับ (PDF)
@@ -196,7 +219,6 @@
                         </a>
                     </div>
                     
-                    <!-- ขยายความสูง iframe เพื่อให้อ่านง่ายและไม่ต้องเลื่อนบาร์ซ้อนกันมาก -->
                     <div class="w-full h-[600px] md:h-[800px] rounded-2xl overflow-hidden border-2 border-olive-100 shadow-sm bg-gray-50 relative opacity-95 hover:opacity-100 transition-opacity">
                         <!-- We use /preview instead of /view for better embedding -->
                         <iframe src="https://drive.google.com/file/d/1S0VzehMEnap5Mcn3ziXo1mWHUGiCH8nO/preview" class="w-full h-full border-none" allow="autoplay"></iframe>
@@ -205,7 +227,7 @@
                     <hr class="my-10 border-t-2 border-dashed border-olive-100">
                 </section>
 
-                <section id="section-guidelines" class="scroll-mt-10">
+                <section id="section-guidelines" class="scroll-mt-24">
                     <h2 class="mt-0">แนวทางการจัดการเรียนการสอนและการปฏิบัติงานของนิสิตแพทย์</h2>
                     
                     <h3>1. ระยะเวลาการเรียน</h3>
@@ -341,7 +363,7 @@
                     </ul>
                 </section>
 
-                <section id="section-evaluation" class="scroll-mt-10">
+                <section id="section-evaluation" class="scroll-mt-24">
                     <h2>การประเมินผล</h2>
                     <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
                         <table class="mb-0 border-0">
@@ -390,7 +412,7 @@
                     </div>
                 </section>
 
-                <section id="section-contacts" class="scroll-mt-10">
+                <section id="section-contacts" class="scroll-mt-24">
                     <h2>ข้อมูลติดต่อของภาควิชาโสต ศอ นาสิกวิทยา</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
@@ -423,7 +445,7 @@
                     </div>
                 </section>
 
-                <section id="section-appendix" class="scroll-mt-10">
+                <section id="section-appendix" class="scroll-mt-24">
                     <h2>ภาคผนวก: ข้อตกลงและข้อปฏิบัติร่วมกัน</h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
