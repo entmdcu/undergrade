@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="th" class="scroll-smooth">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>คู่มือนิสิตแพทย์ - รายวิชาโสต ศอ นาสิกวิทยา</title>
+    <title>3000525 รายวิชาโสต ศอ นาสิกวิทยา</title>
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Prompt -->
+    
+    <!-- Google Fonts: Prompt for modern and clear Thai typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Tailwind Config for Custom Pastel Colors -->
     <script>
         tailwind.config = {
             theme: {
@@ -21,173 +25,336 @@
                         sans: ['Prompt', 'sans-serif'],
                     },
                     colors: {
-                        olive: {
-                            50: '#f5f7f2',
-                            100: '#e7ede0',
-                            200: '#d0dbc3',
-                            300: '#b1c39e',
-                            400: '#90a676',
-                            500: '#728c55',
-                            600: '#586f40', // Base Olive
-                            700: '#455734',
-                            800: '#38462b',
-                            900: '#303b26',
+                        pastel: {
+                            blue: '#E0F2FE',
+                            pink: '#FCE7F3',
+                            green: '#DCFCE7',
+                            purple: '#F3E8FF',
+                            yellow: '#FEF9C3',
+                            orange: '#FFEDD5',
+                            teal: '#CCFBF1'
                         }
                     }
                 }
             }
         }
     </script>
+
     <style>
-        body {
-            font-family: 'Prompt', sans-serif;
-            background-color: #f9faf7; /* Very light olive-tinted background */
+        /* Base styles to ensure smooth scrolling and typography */
+        html {
+            scroll-behavior: smooth;
         }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.95);
+        body {
+            background-color: #F8FAFC; /* Very light slate background */
+            color: #1E293B; /* Dark slate text for high contrast & clarity */
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
         }
-        /* Custom scrollbar for webkit */
-        ::-webkit-scrollbar {
-            width: 8px;
+        .card-hover {
+            transition: all 0.3s ease;
         }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #728c55; 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #586f40; 
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body class="text-gray-800 antialiased">
+<body class="font-sans antialiased text-gray-800 flex flex-col min-h-screen">
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-16 pb-16 md:pt-24 md:pb-24 bg-olive-50 relative overflow-hidden">
-        <!-- Background decorative elements -->
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 opacity-30">
-            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-olive-200 blur-3xl"></div>
-            <div class="absolute top-48 -left-24 w-72 h-72 rounded-full bg-olive-300 blur-3xl"></div>
+    <!-- Navigation Bar -->
+    <header class="glass-nav fixed w-full top-0 z-50 border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo / Title -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-pastel-blue rounded-full flex items-center justify-center text-blue-600 shadow-sm">
+                        <i class="fa-solid fa-stethoscope text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-lg leading-tight text-slate-800">3000525 โสต ศอ นาสิกวิทยา</h1>
+                        <p class="text-xs text-slate-500 font-medium">Otolaryngology</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6">
+                    <a href="#activities" class="text-slate-600 hover:text-blue-600 font-medium transition-colors"><i class="fa-regular fa-calendar-days mr-1"></i> ตารางกิจกรรม</a>
+                    <a href="#manual" class="text-slate-600 hover:text-blue-600 font-medium transition-colors"><i class="fa-solid fa-book-open mr-1"></i> คู่มือนิสิต</a>
+                    <a href="#documents" class="text-slate-600 hover:text-blue-600 font-medium transition-colors"><i class="fa-regular fa-folder-open mr-1"></i> เอกสารการเรียน</a>
+                    <a href="#vdo" class="text-slate-600 hover:text-blue-600 font-medium transition-colors"><i class="fa-solid fa-play mr-1"></i> ลิงก์ VDO</a>
+                    <a href="#join" class="text-slate-600 hover:text-blue-600 font-medium transition-colors"><i class="fa-solid fa-qrcode mr-1"></i> เข้าร่วมกลุ่ม</a>
+                    <a href="#leave" class="text-slate-600 hover:text-blue-600 font-medium transition-colors"><i class="fa-solid fa-user-clock mr-1"></i> ระเบียบการลา</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-blue-600 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="text-center max-w-4xl mx-auto">
-                <span class="inline-block py-1 px-4 rounded-full bg-olive-100 text-olive-800 text-sm font-semibold mb-6 border border-olive-200">
-                    ปีการศึกษา 2569 | ภาควิชาโสต ศอ นาสิกวิทยา คณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-lg">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="#activities" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-pastel-blue transition-colors"><i class="fa-regular fa-calendar-days w-6"></i> ตารางกิจกรรม</a>
+                <a href="#manual" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-pastel-blue transition-colors"><i class="fa-solid fa-book-open w-6"></i> คู่มือนิสิต</a>
+                <a href="#documents" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-pastel-blue transition-colors"><i class="fa-regular fa-folder-open w-6"></i> เอกสารการเรียน</a>
+                <a href="#vdo" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-pastel-blue transition-colors"><i class="fa-solid fa-play w-6"></i> ลิงก์ VDO</a>
+                <a href="#join" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-pastel-blue transition-colors"><i class="fa-solid fa-qrcode w-6"></i> สแกนเข้าร่วมกลุ่ม</a>
+                <a href="#leave" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-pastel-blue transition-colors"><i class="fa-solid fa-user-clock w-6"></i> ระเบียบการลา</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-28 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+
+        <!-- Hero Section -->
+        <div class="bg-gradient-to-br from-pastel-blue to-pastel-purple rounded-3xl p-8 md:p-12 mb-10 shadow-sm relative overflow-hidden">
+            <!-- Decorative circle -->
+            <div class="absolute -top-16 -right-16 w-64 h-64 bg-white opacity-40 rounded-full blur-3xl"></div>
+            
+            <div class="relative z-10 text-center space-y-4">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-white/70 text-blue-700 font-semibold text-sm shadow-sm backdrop-blur-sm border border-white/50 mb-2">
+                    ปีการศึกษา 2569
                 </span>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
-                    คู่มือนิสิตแพทย์<br>
-                    <span class="text-olive-600">รายวิชาโสต ศอ นาสิกวิทยา</span>
+                <h1 class="text-3xl md:text-5xl font-bold text-slate-800 mb-2 tracking-tight">
+                    3000525 รายวิชาโสต ศอ นาสิกวิทยา
                 </h1>
-                <p class="text-xl md:text-2xl font-semibold text-olive-700 mb-8">Course 3000525</p>
+                <p class="text-xl md:text-2xl text-slate-600 font-medium">Otolaryngology</p>
+                <p class="text-base md:text-lg text-slate-700 font-medium mt-4">
+                    ภาควิชาโสต ศอ นาสิกวิทยา คณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย
+                </p>
+            </div>
+        </div>
+
+        <!-- Critical Notice -->
+        <div class="bg-pastel-yellow border-l-4 border-yellow-400 p-5 rounded-r-xl rounded-l-md shadow-sm mb-12 flex items-start gap-4">
+            <div class="text-yellow-600 mt-1 text-xl">
+                <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-slate-800 mb-1">ประกาศสำคัญ:</h3>
+                <p class="text-slate-700 font-medium">* กรุณาอ่าน <span class="font-bold text-blue-600">"คู่มือนิสิตแพทย์"</span> ทุกครั้งก่อนขึ้นเรียน</p>
+            </div>
+        </div>
+
+        <!-- Page Menu Buttons (Grid) -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-layer-group text-pastel-blue drop-shadow-sm"></i> เมนูลัด
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                <!-- Button 1 -->
+                <a href="#activities" class="card-hover bg-white border border-gray-100 p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-3 group">
+                    <div class="w-16 h-16 bg-pastel-blue rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i class="fa-regular fa-calendar-days text-2xl text-blue-500"></i>
+                    </div>
+                    <span class="font-semibold text-slate-700 group-hover:text-blue-600">ตารางกิจกรรม</span>
+                </a>
                 
-                <div class="inline-flex items-center gap-2 bg-red-50 text-red-600 px-6 py-3 rounded-xl border border-red-200 font-medium text-sm md:text-base shadow-sm">
-                    <i data-lucide="info" class="w-5 h-5 shrink-0"></i>
-                    *กรุณาอ่านคู่มือนิสิตแพทย์ทุกครั้งก่อนขึ้นเรียน
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Important Notice Section -->
-    <section class="py-8 bg-olive-100 border-y border-olive-200">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row items-center gap-6 bg-white p-6 md:p-8 rounded-2xl shadow-sm border-l-4 border-l-red-500 border-t border-r border-b border-olive-100">
-                <div class="bg-red-100 text-red-600 p-3 rounded-full shrink-0">
-                    <i data-lucide="alert-triangle" class="w-8 h-8"></i>
-                </div>
-                <div class="w-full">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">ข้อปฏิบัติสำคัญก่อนเข้าพื้นที่</h3>
-                    <ul class="text-gray-700 text-lg mb-4 font-medium space-y-2 list-disc list-inside marker:text-red-500">
-                        <li>กรุณาแลกบัตรที่ประชาสัมพันธ์ทุกครั้งก่อนเข้ามาเรียนในพื้นที่ภาควิชาโสต ศอ นาสิกวิทยา ชั้น 17</li>
-                    </ul>
-                    
-
-
-    <!-- Main Categories -->
-    <section id="categories" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">เมนูการเรียนการสอน</h2>
-                <div class="w-24 h-1 bg-olive-500 mx-auto rounded-full"></div>
-            </div>
-
-            <!-- Primary Menus (Big Cards) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <!-- Menu 1 (Big) - ตารางกิจกรรม -->
-                <a href="https://entmdcu.github.io/undergrade/handbook.html" class="group bg-white border-2 border-olive-100 rounded-3xl p-10 md:p-14 shadow-md hover:shadow-2xl hover:border-olive-400 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
-                    <div class="w-28 h-28 bg-olive-50 text-olive-600 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-olive-600 group-hover:text-white transition-colors shadow-sm">
-                        <i data-lucide="calendar-days" class="w-14 h-14"></i>
+                <!-- Button 2 -->
+                <a href="#manual" class="card-hover bg-white border border-gray-100 p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-3 group">
+                    <div class="w-16 h-16 bg-pastel-green rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-book-open text-2xl text-green-500"></i>
                     </div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-olive-700 transition-colors">ตารางกิจกรรม</h3>
-                    <p class="text-gray-500 font-medium">ดูตารางเรียนและการปฏิบัติงาน</p>
+                    <span class="font-semibold text-slate-700 group-hover:text-green-600">คู่มือนิสิต</span>
                 </a>
 
-                <!-- Menu 3 (Big) - คู่มือนิสิตแพทย์ -->
-                <a href="https://sites.google.com/view/3000525otolaryngology/%E0%B8%84%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B8%AA%E0%B8%95" class="group bg-white border-2 border-olive-100 rounded-3xl p-10 md:p-14 shadow-md hover:shadow-2xl hover:border-olive-400 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
-                    <div class="w-28 h-28 bg-olive-50 text-olive-600 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-olive-600 group-hover:text-white transition-colors shadow-sm">
-                        <i data-lucide="book-open" class="w-14 h-14"></i>
+                <!-- Button 3 -->
+                <a href="#documents" class="card-hover bg-white border border-gray-100 p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-3 group">
+                    <div class="w-16 h-16 bg-pastel-yellow rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i class="fa-regular fa-folder-open text-2xl text-yellow-600"></i>
                     </div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-olive-700 transition-colors">คู่มือนิสิตแพทย์</h3>
-                    <p class="text-gray-500 font-medium">ข้อบังคับและแนวทางการปฏิบัติ</p>
-                </a>
-            </div>
-
-            <!-- Secondary Menus (Smaller Cards, adjusted to be larger but still secondary) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <!-- Menu 2 (Medium) - เอกสารประกอบการเรียน -->
-                <a href="https://sites.google.com/view/3000525otolaryngology/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B2%E0%B8%87%E0%B9%86" class="group bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:border-olive-300 transition-all duration-300 transform hover:-translate-y-1 flex items-center text-left gap-6">
-                    <div class="w-20 h-20 shrink-0 bg-olive-50 text-olive-600 rounded-2xl flex items-center justify-center group-hover:bg-olive-600 group-hover:text-white transition-colors shadow-sm">
-                        <i data-lucide="monitor-play" class="w-10 h-10"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-olive-700 transition-colors">เอกสารประกอบการเรียน<br>และลิงก์วีดีโอ</h3>
-                    </div>
+                    <span class="font-semibold text-slate-700 group-hover:text-yellow-600">เอกสารการเรียน</span>
                 </a>
 
-                <!-- Menu 4 (Medium) - สแกนเข้าร่วมกลุ่ม -->
-                <a href="https://sites.google.com/view/3000525otolaryngology/qr-openchat" class="group bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:border-olive-300 transition-all duration-300 transform hover:-translate-y-1 flex items-center text-left gap-6">
-                    <div class="w-20 h-20 shrink-0 bg-olive-50 text-olive-600 rounded-2xl flex items-center justify-center group-hover:bg-olive-600 group-hover:text-white transition-colors shadow-sm">
-                        <i data-lucide="qr-code" class="w-10 h-10"></i>
+                <!-- Button 4 -->
+                <a href="#vdo" class="card-hover bg-white border border-gray-100 p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-3 group">
+                    <div class="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-play text-2xl text-pink-500"></i>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-olive-700 transition-colors">สแกนเข้าร่วมกลุ่ม</h3>
+                    <span class="font-semibold text-slate-700 group-hover:text-pink-600">ลิงก์ VDO</span>
+                </a>
+
+                <!-- Button 5 -->
+                <a href="#join" class="card-hover bg-white border border-gray-100 p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-3 group">
+                    <div class="w-16 h-16 bg-pastel-purple rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-qrcode text-2xl text-purple-500"></i>
                     </div>
+                    <span class="font-semibold text-slate-700 group-hover:text-purple-600">สแกนเข้าร่วมกลุ่ม</span>
+                </a>
+
+                <!-- Button 6 -->
+                <a href="#leave" class="card-hover bg-white border border-gray-100 p-6 rounded-2xl flex flex-col items-center justify-center text-center gap-3 group">
+                    <div class="w-16 h-16 bg-pastel-orange rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-user-clock text-2xl text-orange-500"></i>
+                    </div>
+                    <span class="font-semibold text-slate-700 group-hover:text-orange-600">ระเบียบการลา</span>
                 </a>
             </div>
         </div>
-    </section>
 
-    <!-- Footer / Contact -->
-    <footer id="contact" class="bg-gray-50 border-t border-gray-200 py-8 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-                <div>
-                    <h3 class="text-sm font-bold text-gray-700 mb-1">ติดต่อภาควิชาโสต ศอ นาสิกวิทยา</h3>
-                    <p class="text-xs text-gray-500 mb-0">อาคารรัตนวิทยาพัฒน์ ชั้น 17 โซนเอ คณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย</p>
+        <!-- Assessment Guidelines Section -->
+        <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+            <!-- Header for assessment -->
+            <div class="bg-slate-800 p-6 md:p-8 text-white relative overflow-hidden">
+                <div class="absolute right-0 top-0 opacity-10">
+                    <i class="fa-solid fa-clipboard-check text-9xl"></i>
                 </div>
-                <div class="text-sm text-gray-600">
-                    <p class="mb-1 flex items-center justify-center md:justify-end gap-2 font-medium">
-                        <i data-lucide="phone" class="w-4 h-4 text-olive-600"></i> 
-                        02-256-4000 ต่อ 61724 หรือ 085-886-8364 (พี่เดียร์)
-                    </p>
-                    <p class="text-xs text-gray-400 mb-0 md:text-right">&copy; 2026 ภาควิชาโสต ศอ นาสิกวิทยา</p>
-                </div>
+                <h2 class="text-2xl font-bold relative z-10 mb-2">ระเบียบการส่งแบบประเมิน</h2>
+                <p class="text-slate-200 text-lg relative z-10">* ขอให้นิสิตแพทย์ทุกคนปฏิบัติส่งแบบประเมินให้อาจารย์ผู้สอน ดังรายละเอียดต่อไปนี้</p>
             </div>
+
+            <div class="p-6 md:p-8 space-y-8">
+                
+                <!-- Guideline 1 -->
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="bg-pastel-blue text-blue-700 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold shrink-0 shadow-sm">
+                        1
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold text-slate-800 mb-3 border-b border-gray-100 pb-2">แบบฟอร์ม OPD <span class="text-blue-600 text-base font-normal ml-2">(CSA-A-Y4-5)</span></h3>
+                        <div class="bg-slate-50 rounded-xl p-5 border border-slate-100">
+                            <h4 class="font-semibold text-slate-700 mb-2">แนวปฏิบัติ:</h4>
+                            <ul class="space-y-2 text-slate-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                                    <span>ประเมินใน Program REXX เท่านั้น</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                                    <span>ประเมินแบบ separate</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                                    <span>ประเมินทุกวัน</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guideline 2 -->
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="bg-pastel-green text-green-700 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold shrink-0 shadow-sm">
+                        2
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold text-slate-800 mb-3 border-b border-gray-100 pb-2">แบบประเมิน Round Ward <span class="text-green-600 text-base font-normal ml-2">(CSA-B1-ENT)</span></h3>
+                        <div class="bg-slate-50 rounded-xl p-5 border border-slate-100">
+                            <ul class="space-y-2 text-slate-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                                    <span>ประเมินใน Program REXX เท่านั้น</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                                    <span>ประเมินแบบ all ส่งโดยหัวหน้ากลุ่ม</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                                    <span>ประเมินทุกวัน</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guideline 3 -->
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="bg-pastel-purple text-purple-700 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold shrink-0 shadow-sm">
+                        3
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-bold text-slate-800 mb-3 border-b border-gray-100 pb-2">แบบประเมิน Logbook: <span class="text-purple-600 font-semibold ml-1">Clinical Task</span></h3>
+                        <div class="bg-slate-50 rounded-xl p-5 border border-slate-100">
+                            <h4 class="font-semibold text-slate-700 mb-3">แนวปฏิบัติ:</h4>
+                            <ul class="space-y-4 text-slate-700">
+                                <li class="flex items-start gap-3 bg-white p-3 rounded-lg border border-slate-100 shadow-sm">
+                                    <div class="bg-pastel-blue text-blue-500 w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-syringe text-sm"></i></div>
+                                    <div>
+                                        <span class="font-semibold text-slate-800">หัตถการที่ทำในหุ่น</span> (anterior nasal packing, posterior nasal packing, remove FB in ear/nose/throat) ทั้งหมด 5 หัตถการ <br>
+                                        <span class="text-blue-600 text-sm font-medium">➔ ส่งให้อาจารย์ที่สอน approve</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3 bg-white p-3 rounded-lg border border-slate-100 shadow-sm">
+                                    <div class="bg-pastel-green text-green-500 w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-eye text-sm"></i></div>
+                                    <div>
+                                        <span class="font-semibold text-slate-800">หัตถการที่ observe ใน OR</span> (tonsillectomy, tracheostomy) <br>
+                                        <span class="text-blue-600 text-sm font-medium">➔ ส่งให้อาจารย์เจ้าของเคส / หรืออาจารย์ที่ดูแลห้องผ่าตัดวันนั้นตามตาราง approve</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3 bg-white p-3 rounded-lg border border-slate-100 shadow-sm">
+                                    <div class="bg-pastel-yellow text-yellow-600 w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-user-doctor text-sm"></i></div>
+                                    <div>
+                                        <span class="font-semibold text-slate-800">หัตถการที่สอนโดยแพทย์ประจำบ้าน</span> (tracheostomy care) <br>
+                                        <span class="text-blue-600 text-sm font-medium">➔ ส่งให้อาจารย์ที่สอนหัตถการ approve</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3 bg-white p-3 rounded-lg border border-slate-100 shadow-sm">
+                                    <div class="bg-pastel-pink text-pink-500 w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-ear-listen text-sm"></i></div>
+                                    <div>
+                                        <span class="font-semibold text-slate-800">หัตถการ Audiology</span> <br>
+                                        <span class="text-blue-600 text-sm font-medium">➔ ส่งให้อาจารย์ที่สอน approve</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Important Warning Note -->
+                        <div class="mt-6 bg-rose-50 border border-rose-200 p-4 rounded-xl flex items-center gap-3">
+                            <i class="fa-solid fa-bell text-rose-500 text-xl animate-pulse"></i>
+                            <p class="text-rose-800 font-bold text-lg">
+                                * ทุกหัตถการที่นิสิตส่งให้อาจารย์ นิสิตแจ้งอาจารย์ด้วยว่าให้เข้าไป approve *
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-auto">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-slate-500 font-medium text-sm">
+                &copy; ปีการศึกษา 2569 | ภาควิชาโสต ศอ นาสิกวิทยา คณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย
+            </p>
         </div>
     </footer>
 
-    <!-- Initialize Scripts -->
+    <!-- Scripts -->
     <script>
-        // Initialize Lucide Icons
-        if (typeof lucide !== 'undefined') {
-            lucide.createIcons();
-        } else {
-            console.error('Lucide library could not be loaded.');
-        }
+        // Toggle mobile menu
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling logic for empty hash links to prevent jumping
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if(this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                    }
+                    // Close mobile menu on click
+                    if(!menu.classList.contains('hidden')) {
+                        menu.classList.add('hidden');
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
