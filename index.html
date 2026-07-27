@@ -8,12 +8,12 @@
     <style>
         :root {
             /* โทนสีพาสเทล */
-            --bg-color: #F8FBFA; /* สีพื้นหลังขาวอมฟ้าอ่อน */
-            --primary-color: #B4E1FF; /* ฟ้าพาสเทล */
-            --secondary-color: #FFD6E0; /* ชมพูพาสเทล */
-            --accent-color: #C1E1C1; /* เขียวพาสเทล */
-            --yellow-pastel: #FFF1B9; /* เหลืองพาสเทล */
-            --text-color: #2D3748; /* สีตัวอักษรเทาเข้ม (อ่านง่ายกว่าสีดำสนิท) */
+            --bg-color: #F8FBFA;
+            --primary-color: #B4E1FF;
+            --secondary-color: #FFD6E0;
+            --accent-color: #C1E1C1;
+            --yellow-pastel: #FFF1B9;
+            --text-color: #2D3748;
         }
 
         * {
@@ -26,15 +26,15 @@
             font-family: 'Prompt', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            /* ปรับขนาดตัวอักษรพื้นฐานให้ใหญ่ขึ้น */
-            font-size: 18px; 
-            line-height: 1.6;
+            /* ขนาดตัวอักษรพอดี อ่านสบายตา */
+            font-size: 16px; 
+            line-height: 1.7;
         }
 
         /* เมนูด้านบน (Header) */
         .navbar {
             background-color: #ffffff;
-            padding: 15px 30px;
+            padding: 12px 20px;
             display: flex;
             justify-content: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -46,10 +46,10 @@
         .navbar a {
             text-decoration: none;
             color: var(--text-color);
-            margin: 0 15px;
+            margin: 0 12px;
             font-weight: 500;
-            font-size: 20px; /* ขยายขนาดเมนู */
-            padding: 8px 15px;
+            font-size: 17px;
+            padding: 8px 16px;
             border-radius: 20px;
             transition: 0.3s;
         }
@@ -61,95 +61,106 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 30px 20px;
+            padding: 40px 20px;
         }
 
         /* ส่วนหัว (Hero Section) */
         .hero {
             text-align: center;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 50px 20px;
-            border-radius: 25px;
+            padding: 40px 20px;
+            border-radius: 20px;
             margin-bottom: 40px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
         }
 
         .hero h1 {
             font-size: 2.2rem;
             color: #1A365D;
             margin-bottom: 10px;
+            font-weight: 600;
         }
 
         .hero h2 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 400;
             margin-bottom: 5px;
+            color: #2D3748;
         }
 
         /* ปุ่มเมนูเพจ (Page Menu Buttons) */
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
+            gap: 15px;
             margin-bottom: 50px;
         }
 
         .menu-btn {
             background-color: #ffffff;
             border: 2px solid var(--primary-color);
-            padding: 20px 10px;
-            border-radius: 15px;
+            padding: 15px 10px;
+            border-radius: 12px;
             text-align: center;
             font-size: 1.1rem;
             font-weight: 500;
             color: var(--text-color);
             cursor: pointer;
             text-decoration: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            box-shadow: 0 3px 5px rgba(0,0,0,0.03);
             transition: all 0.3s ease;
         }
 
         .menu-btn:hover {
             background-color: var(--primary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.08);
         }
 
-        /* ข้อความเตือน */
+        /* ข้อความเตือนประกาศ */
         .alert-box {
             background-color: var(--yellow-pastel);
-            padding: 20px;
-            border-radius: 15px;
+            padding: 15px 20px;
+            border-radius: 12px;
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 40px;
-            border-left: 8px solid #FFD166;
+            border-left: 6px solid #FFD166;
+            color: #744210;
         }
 
         /* ส่วนระเบียบการประเมิน (Evaluation Guidelines) */
         .section-title {
             text-align: center;
             font-size: 1.8rem;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             color: #2C5282;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            color: #4A5568;
         }
 
         .eval-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 25px;
+            gap: 20px;
         }
 
         .eval-card {
             background: #ffffff;
             padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.04);
-            border-top: 6px solid var(--accent-color);
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border-top: 5px solid var(--accent-color);
         }
 
         .eval-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: #2F855A;
             margin-bottom: 15px;
             display: flex;
@@ -161,8 +172,8 @@
         }
 
         .eval-card li {
-            font-size: 1.15rem;
-            margin-bottom: 12px;
+            font-size: 1.05rem;
+            margin-bottom: 15px;
             padding-left: 30px;
             position: relative;
         }
@@ -171,21 +182,33 @@
             content: "✅";
             position: absolute;
             left: 0;
-            top: 2px;
+            top: 1px;
         }
 
         .eval-card.logbook li::before {
-            content: "👉";
+            content: "📌";
+        }
+
+        /* สำหรับข้อความส่งให้อาจารย์ (เน้นสีให้ชัดเจน) */
+        .send-to {
+            color: #2B6CB0;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 5px;
+            background-color: #EBF8FF;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 1rem;
         }
 
         /* กล่องย้ำเตือนสีชมพู */
         .important-note {
             background-color: var(--secondary-color);
             padding: 20px;
-            border-radius: 15px;
-            margin-top: 30px;
+            border-radius: 12px;
+            margin-top: 35px;
             text-align: center;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 500;
             color: #97266D;
             border: 2px dashed #D53F8C;
@@ -199,7 +222,7 @@
             }
             .hero h1 { font-size: 1.8rem; }
             .hero h2 { font-size: 1.2rem; }
-            body { font-size: 16px; }
+            .navbar a { font-size: 15px; margin: 5px; }
         }
     </style>
 </head>
@@ -239,7 +262,7 @@
 
         <!-- ระเบียบการส่งประเมิน -->
         <h2 class="section-title">📋 สรุปการส่งแบบประเมิน</h2>
-        <p style="text-align: center; margin-bottom: 20px; font-size: 1.2rem;">ขอให้นิสิตแพทย์ทุกคน ปฏิบัติและส่งแบบประเมินให้อาจารย์ผู้สอน ดังนี้</p>
+        <p class="section-subtitle">ขอให้นิสิตแพทย์ทุกคน ปฏิบัติและส่งแบบประเมิน ดังนี้</p>
 
         <div class="eval-grid">
             
@@ -258,7 +281,7 @@
                 <h3>2. แบบประเมิน Round Ward (CSA-B1-ENT)</h3>
                 <ul>
                     <li><strong>ทำที่ไหน:</strong> ประเมินใน Program REXX เท่านั้น</li>
-                    <li><strong>รูปแบบ:</strong> ประเมินแบบกลุ่ม (All) <br><em>*ให้หัวหน้ากลุ่มเป็นผู้กดส่ง*</em></li>
+                    <li><strong>รูปแบบ:</strong> ประเมินแบบกลุ่ม (All) <br><em style="color: #718096; font-size: 0.95rem;">*ให้หัวหน้ากลุ่มเป็นผู้กดส่ง*</em></li>
                     <li><strong>ความถี่:</strong> ประเมิน <u>ทุกวัน</u></li>
                 </ul>
             </div>
@@ -266,22 +289,21 @@
             <!-- งานที่ 3 -->
             <div class="eval-card logbook">
                 <h3 style="color: #2B6CB0;">3. แบบประเมิน Logbook: Clinical Task</h3>
-                <p style="margin-bottom: 15px; font-weight: 500;">ใครเป็นผู้กด Approve ในแต่ละหัตถการ?</p>
                 <ul>
-                    <li><strong>หัตถการในหุ่น 5 หัตถการ</strong><br> 
-                        <span style="font-size: 1rem; color: #4A5568;">(Anterior/Posterior nasal packing, Remove FB in ear/nose/throat)</span><br>
-                        👉 <em>ส่งให้ "อาจารย์ผู้สอนหัตถการ"</em>
+                    <li><strong>หัตถการที่ทำในหุ่น</strong> ทั้งหมด 5 หัตถการ<br> 
+                        <span style="font-size: 0.95rem; color: #718096;">(Anterior nasal packing, Posterior nasal packing, Remove FB in ear/nose/throat)</span><br>
+                       
                     </li>
                     <li style="margin-top: 15px;"><strong>หัตถการที่ Observe ใน OR</strong><br> 
-                        <span style="font-size: 1rem; color: #4A5568;">(Tonsillectomy, Tracheostomy)</span><br>
-                        👉 <em>ส่งให้ "อาจารย์เจ้าของเคส" หรือ "อาจารย์ที่คุมห้องผ่าตัดในวันนั้น"</em>
+                        <span style="font-size: 0.95rem; color: #718096;">(Tonsillectomy, Tracheostomy)</span><br>
+                        
                     </li>
                     <li style="margin-top: 15px;"><strong>หัตถการที่สอนโดยแพทย์ประจำบ้าน</strong><br>
-                        <span style="font-size: 1rem; color: #4A5568;">(Tracheostomy care)</span><br>
-                        👉 <em>ส่งให้ "อาจารย์ผู้สอนหัตถการ"</em>
+                        <span style="font-size: 0.95rem; color: #718096;">(Tracheostomy care)</span><br>
+                       
                     </li>
                     <li style="margin-top: 15px;"><strong>หัตถการ Audiology</strong><br>
-                        👉 <em>ส่งให้ "อาจารย์ผู้สอน"</em>
+                      
                     </li>
                 </ul>
             </div>
@@ -291,7 +313,7 @@
         <!-- คำเตือนสีชมพูเด่นๆ -->
         <div class="important-note">
             ⚠️ <strong>ย้ำเตือน!</strong> ทุกหัตถการที่นิสิตส่งประเมิน <br>
-            <u>นิสิตต้องแจ้งอาจารย์ด้วยทุกครั้ง</u> เพื่อให้อาจารย์เข้าไปกด Approve
+            <u>ส่งงานกับอาจารย์ผู้สอน และนิสิตต้องแจ้งอาจารย์ด้วยทุกครั้ง</u> เพื่อให้อาจารย์เข้าไปกด Approve
         </div>
 
     </div>
