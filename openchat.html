@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Openchat - สแกนเข้าร่วมกลุ่ม</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        olive: {
+                            50: '#f5f7f2',
+                            100: '#e7ede0',
+                            200: '#d0dbc3',
+                            300: '#b1c39e',
+                            400: '#90a676',
+                            500: '#728c55',
+                            600: '#586f40', // Base Olive
+                            700: '#455734',
+                            800: '#38462b',
+                            900: '#303b26',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f9faf7; 
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #728c55; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #586f40; 
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased pb-16">
+
+    <div class="pt-12 pb-12 bg-olive-50 border-b border-olive-100 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-olive-200 rounded-full blur-3xl opacity-40 -translate-y-1/2 translate-x-1/3"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">QR Openchat<br><span class="text-olive-600">สแกนเข้าร่วมกลุ่ม</span></h1>
+            <p class="text-xl text-olive-700 font-medium">ภาควิชาโสต ศอ นาสิกวิทยา คณะแพทยศาสตร์ จุฬาฯ</p>
+        </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <div class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-olive-100 mb-8">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="bg-green-100 w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm shrink-0">
+                    <i data-lucide="message-circle" class="w-7 h-7 text-green-700"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-0 border-none pb-0 mt-0">ช่องทางการติดต่อสื่อสาร</h2>
+            </div>
+            
+            <div class="bg-olive-50 border-l-4 border-olive-500 p-5 rounded-r-xl mb-6 shadow-sm">
+                <p class="text-lg text-olive-900 font-medium leading-relaxed mb-0">
+                    ขอให้นิสิตแพทย์ที่ขึ้นเรียนที่ภาควิชาโสต ศอ นาสิกวิทยา (ENT) <br>
+                    <span class="text-red-600 font-bold">ตรวจสอบรายชื่อ กลุ่มของตนเอง และสแกน QR Code เพื่อเข้าร่วมกลุ่ม Line OpenChat ได้จากโฟลเดอร์ด้านล่างนี้</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                <div class="flex items-start gap-3">
+                    <i data-lucide="check-circle-2" class="w-6 h-6 text-olive-600 shrink-0 mt-0.5"></i>
+                    <p class="mb-0 text-base">ตรวจสอบรายชื่อและกลุ่มการเรียนของตนเองให้ถูกต้อง</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <i data-lucide="check-circle-2" class="w-6 h-6 text-olive-600 shrink-0 mt-0.5"></i>
+                    <p class="mb-0 text-base">เลือกสแกน QR Code ให้ตรงกับ <strong>กลุ่ม</strong> ที่ตนเองมีชื่ออยู่</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <i data-lucide="check-circle-2" class="w-6 h-6 text-olive-600 shrink-0 mt-0.5"></i>
+                    <p class="mb-0 text-base">ใช้ชื่อ-นามสกุลจริง (หรือรหัสนิสิต) ในการเข้าร่วมกลุ่มเพื่อให้ง่ายต่อการตรวจสอบ</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <i data-lucide="check-circle-2" class="w-6 h-6 text-olive-600 shrink-0 mt-0.5"></i>
+                    <p class="mb-0 text-base font-bold text-olive-800">หลังจากได้เข้ากลุ่มแล้วขอให้นิสิตตั้งเป็นชื่อจริง (ชื่อเล่น)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-4 md:p-6 rounded-3xl shadow-sm border border-olive-100 h-[600px] md:h-[800px] flex flex-col">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 px-2 gap-3">
+                <h3 class="font-bold text-olive-800 text-lg flex items-center gap-2 mt-0 mb-0 border-none pb-0">
+                    <i data-lucide="folder-open" class="w-5 h-5"></i> โฟลเดอร์รายชื่อและ QR Code
+                </h3>
+                <a href="https://drive.google.com/drive/folders/1e37YJ61Ld2GfAQNcq0u2jTFdBtnae8NU?usp=sharing" target="_blank" class="inline-flex items-center justify-center gap-2 bg-olive-100 hover:bg-olive-200 text-olive-800 px-4 py-2 rounded-xl font-bold transition-colors shadow-sm text-sm shrink-0">
+                    <i data-lucide="external-link" class="w-4 h-4"></i> เปิดเต็มหน้าจอ
+                </a>
+            </div>
+            
+            <div class="w-full flex-grow rounded-2xl overflow-hidden border-2 border-gray-200 bg-gray-50 relative opacity-95 hover:opacity-100 transition-opacity">
+                <iframe src="https://drive.google.com/embeddedfolderview?id=1e37YJ61Ld2GfAQNcq0u2jTFdBtnae8NU#grid" class="w-full h-full border-none" allow="autoplay">
+                    <div class="text-center p-8">
+                        <p class="text-gray-600 mb-4">เบราว์เซอร์ของคุณไม่รองรับการแสดงผลโฟลเดอร์ในหน้านี้</p>
+                        <a href="https://drive.google.com/drive/folders/1e37YJ61Ld2GfAQNcq0u2jTFdBtnae8NU?usp=sharing" target="_blank" class="bg-olive-600 text-white px-4 py-2 rounded-lg font-medium">คลิกเพื่อเปิดโฟลเดอร์</a>
+                    </div>
+                </iframe>
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-4 font-medium">หากเอกสารไม่โหลด กรุณากดปุ่มเปิดเต็มหน้าจอที่มุมขวาบน</p>
+        </div>
+
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        } else {
+            console.error('Lucide library could not be loaded.');
+        }
+    </script>
+</body>
+</html>
