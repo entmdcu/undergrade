@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คู่มือนิสิตแพทย์ - เนื้อหารายละเอียด</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        olive: {
+                            50: '#f5f7f2',
+                            100: '#e7ede0',
+                            200: '#d0dbc3',
+                            300: '#b1c39e',
+                            400: '#90a676',
+                            500: '#728c55',
+                            600: '#586f40', // Base Olive
+                            700: '#455734',
+                            800: '#38462b',
+                            900: '#303b26',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f9faf7; 
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #728c55; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #586f40; 
+        }
+        /* Content formatting */
+        .handbook-content h2 {
+            font-size: 1.6rem; /* ปรับขนาดให้ใหญ่ขึ้น */
+            font-weight: 700;
+            color: #38462b; /* olive-800 */
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e7ede0; /* olive-100 */
+        }
+        .handbook-content h3 {
+            font-size: 1.25rem; /* ปรับขนาดให้ใหญ่ขึ้น */
+            font-weight: 600;
+            color: #586f40; /* olive-600 */
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .handbook-content p {
+            margin-bottom: 0.75rem;
+            line-height: 1.8;
+            color: #4b5563; /* gray-600 */
+            font-size: 1.05rem; /* ปรับขนาดให้ใหญ่ขึ้น */
+        }
+        .handbook-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: #4b5563;
+            font-size: 1.05rem; /* ปรับขนาดให้ใหญ่ขึ้น */
+        }
+        .handbook-content ol {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: #4b5563;
+            font-size: 1.05rem; /* ปรับขนาดให้ใหญ่ขึ้น */
+        }
+        .handbook-content li {
+            margin-bottom: 0.6rem;
+            line-height: 1.65;
+        }
+        /* Custom Table Styling */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            font-size: 1rem; /* ปรับขนาดให้ใหญ่ขึ้นจาก 0.9rem */
+        }
+        th {
+            background-color: #f5f7f2;
+            color: #455734;
+            font-weight: 600;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border: 1px solid #d0dbc3;
+        }
+        td {
+            padding: 0.75rem 1rem;
+            border: 1px solid #e7ede0;
+            color: #4b5563;
+        }
+        tr:nth-child(even) {
+            background-color: #fafbf9;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased pb-16">
+
+    <!-- Page Header (ปรับ padding บนลงเนื่องจากเอา Navbar ออก) -->
+    <div class="pt-16 pb-12 bg-olive-50 border-b border-olive-100 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-olive-200 rounded-full blur-3xl opacity-40 -translate-y-1/2 translate-x-1/3"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="block">
+                <span class="inline-block px-4 py-1.5 bg-olive-100 text-olive-700 text-base font-semibold rounded-full mb-4">ภาควิชาโสต ศอ นาสิกวิทยา</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">การปฏิบัติงานรายวิชา 3000525<br><span class="text-olive-600">โสต ศอ นาสิกวิทยา</span></h1>
+            <p class="text-xl text-olive-700 font-medium">คณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย</p>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="flex flex-col md:flex-row gap-8 lg:gap-10">
+            
+            <!-- Sidebar Navigation (Sticky on Desktop) ปรับ top ให้พอดีตอนไม่มี nav -->
+            <aside class="w-full md:w-1/4 lg:w-1/5 shrink-0">
+                <div class="md:sticky md:top-8 bg-white p-5 rounded-2xl shadow-sm border border-olive-100">
+                    <h3 class="font-bold text-gray-900 mb-4 text-xl border-b border-olive-100 pb-2">สารบัญเนื้อหา</h3>
+                    <!-- ปรับขนาดตัวหนังสือเมนูให้เป็น text-base ใหญ่ขึ้นจาก text-sm -->
+                    <nav class="flex flex-col space-y-2 text-base font-medium">
+                        <!-- เติม class toc-link เพื่อให้ JS ทำงาน -->
+                        <a href="#section-document" class="toc-link text-olive-700 bg-olive-50 hover:bg-olive-100 px-3 py-2.5 rounded-lg transition-colors flex items-center justify-between group">
+                            <span class="flex items-center gap-2"><i data-lucide="file-text" class="w-4 h-4"></i> เอกสารต้นฉบับ (PDF)</span>
+                        </a>
+                        <a href="#section-guidelines" class="toc-link text-gray-600 hover:text-olive-700 hover:bg-olive-50 px-3 py-2.5 rounded-lg transition-colors flex items-center justify-between group">
+                            <span>1. แนวทางการปฏิบัติงาน</span>
+                        </a>
+                        <a href="#section-evaluation" class="toc-link text-gray-600 hover:text-olive-700 hover:bg-olive-50 px-3 py-2.5 rounded-lg transition-colors flex items-center justify-between group">
+                            <span>2. การประเมินผล</span>
+                        </a>
+                        <a href="#section-contacts" class="toc-link text-gray-600 hover:text-olive-700 hover:bg-olive-50 px-3 py-2.5 rounded-lg transition-colors flex items-center justify-between group">
+                            <span>3. ข้อมูลติดต่อภาควิชา</span>
+                        </a>
+                        <a href="#section-appendix" class="toc-link text-gray-600 hover:text-olive-700 hover:bg-olive-50 px-3 py-2.5 rounded-lg transition-colors flex items-center justify-between group">
+                            <span>4. ภาคผนวกและข้อตกลง</span>
+                        </a>
+                    </nav>
+
+                    <div class="mt-8 bg-red-50 p-4 rounded-xl border border-red-200 shadow-sm">
+                        <div class="flex items-center gap-2 text-red-600 mb-2">
+                            <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+                            <span class="font-bold text-base">ข้อปฏิบัติสำคัญ</span>
+                        </div>
+                        <p class="text-sm text-red-700 leading-relaxed font-medium">
+                            กรุณาแลกบัตรที่ประชาสัมพันธ์ทุกครั้งก่อนเข้ามาเรียนในพื้นที่ภาควิชาโสต ศอ นาสิกวิทยา ชั้น 17
+                        </p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Handbook Detail -->
+            <main class="w-full md:w-3/4 lg:w-4/5 bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-olive-100 handbook-content">
+                
+                <!-- Section: Document Embed -->
+                <section id="section-document" class="scroll-mt-10 mb-12">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+                        <h2 class="mt-0 border-none pb-0 text-2xl flex items-center gap-3">
+                            <i data-lucide="file-text" class="w-8 h-8 text-olive-600"></i> เอกสารคู่มือต้นฉบับ (PDF)
+                        </h2>
+                        <a href="https://drive.google.com/file/d/1S0VzehMEnap5Mcn3ziXo1mWHUGiCH8nO/view?usp=drive_link" target="_blank" class="flex items-center gap-2 text-base bg-olive-600 hover:bg-olive-700 text-white px-5 py-2.5 rounded-xl font-bold transition-colors shadow-sm shrink-0">
+                            <i data-lucide="external-link" class="w-5 h-5"></i> เปิดไฟล์แบบเต็มหน้าจอ
+                        </a>
+                    </div>
+                    
+                    <!-- ขยายความสูง iframe เพื่อให้อ่านง่ายและไม่ต้องเลื่อนบาร์ซ้อนกันมาก -->
+                    <div class="w-full h-[600px] md:h-[800px] rounded-2xl overflow-hidden border-2 border-olive-100 shadow-sm bg-gray-50 relative opacity-95 hover:opacity-100 transition-opacity">
+                        <!-- We use /preview instead of /view for better embedding -->
+                        <iframe src="https://drive.google.com/file/d/1S0VzehMEnap5Mcn3ziXo1mWHUGiCH8nO/preview" class="w-full h-full border-none" allow="autoplay"></iframe>
+                    </div>
+                    
+                    <hr class="my-10 border-t-2 border-dashed border-olive-100">
+                </section>
+
+                <section id="section-guidelines" class="scroll-mt-10">
+                    <h2 class="mt-0">แนวทางการจัดการเรียนการสอนและการปฏิบัติงานของนิสิตแพทย์</h2>
+                    
+                    <h3>1. ระยะเวลาการเรียน</h3>
+                    <p>นิสิตแพทย์จะเข้าศึกษาในรายวิชานี้ในรูปแบบ rotation โดยแต่ละ rotation มีระยะเวลา 2 สัปดาห์</p>
+
+                    <h3>2. การแบ่งกลุ่มนิสิตแพทย์</h3>
+                    <p>นิสิตแพทย์จะถูกแบ่งออกเป็น 2 กลุ่มย่อย เพื่อหมุนเวียนการฝึกปฏิบัติงาน โดยสลับการ round กับแพทย์ประจำบ้าน ระหว่างสาย A และสาย B สายละ 1 สัปดาห์</p>
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full sm:w-2/3">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>สาย A</th>
+                                    <th>สาย B</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-semibold bg-gray-50">สัปดาห์ที่ 1</td>
+                                    <td>นสพ. No. 1-6</td>
+                                    <td>นสพ. No. 7-12</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold bg-gray-50">สัปดาห์ที่ 2</td>
+                                    <td>นสพ. No. 7-12</td>
+                                    <td>นสพ. No. 1-6</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>3. การแบ่งกลุ่มปฏิบัติงาน</h3>
+                    <p>นิสิตจะถูกแบ่งเป็น 3 กลุ่มย่อย ได้แก่ OPD 2 กลุ่ม และ OR 1 กลุ่ม โดยหมุนเวียนกันในแต่ละวัน ยกเว้นวันแรกของสัปดาห์ที่ 1 ให้นิสิตทุกคนขึ้นเรียน OPD</p>
+
+                    <h3>4. รูปแบบการจัดการเรียนการสอน</h3>
+                    <p>4.1. นิสิตแพทย์จะเข้าร่วมการเรียนการสอนตามตารางที่กำหนด โดยมีรูปแบบดังต่อไปนี้</p>
+                    <ul class="ml-4">
+                        <li><strong>Lecture:</strong> อาจารย์เป็นผู้บรรยายเนื้อหา</li>
+                        <li><strong>Interactive lecture:</strong> นิสิตแพทย์เข้าฟังการบรรยายร่วมกับการแลกเปลี่ยนความคิดเห็นและซักถามกับอาจารย์
+                            <ul class="mt-2 bg-olive-50 p-4 rounded-lg border border-olive-100">
+                                <li>สำหรับหัวข้อ Introduction to Otolaryngology นิสิตแพทย์ต้องศึกษาวิดีโอการตรวจร่างกายทางโสต ศอ นาสิกวิทยาในระบบ MEDuMore ล่วงหน้า เพื่อเพิ่มความเข้าใจและสามารถมีส่วนร่วมในการเรียนได้อย่างมีประสิทธิภาพ</li>
+                            </ul>
+                        </li>
+                        <li><strong>Question and Answer (Q&A):</strong> นิสิตแพทย์ต้องศึกษาบทเรียนที่บันทึกไว้ล่วงหน้า (Recorded lecture) ที่อยู่ในหัวข้อ 4.3 และนำข้อสงสัยมาอภิปรายกับอาจารย์ในชั้นเรียน</li>
+                    </ul>
+                    <p>4.2. การจัดการเรียนการสอนส่วนใหญ่จะดำเนินการแบบ onsite ณ อาคารรัตนวิทยาพัฒน์ ชั้น 17 อย่างไรก็ตาม หากไม่สามารถจัดการเรียนการสอนแบบ onsite ได้ จะดำเนินการในรูปแบบ online ผ่านโปรแกรม Zoom แบบ real time หรือผ่านระบบ MEDuMore โดยเจ้าหน้าที่จะจัดส่งลิงก์ให้ล่วงหน้า</p>
+                    <p>4.3. นิสิตสามารถศึกษาบทเรียนเพิ่มเติมผ่านระบบ MEDuMore ของคณะแพทยศาสตร์ เพื่อทบทวนและเสริมความรู้ได้ตามความเหมาะสม <a href="https://www.medumore.org/course/Otolaryngology" target="_blank" class="text-olive-600 underline font-medium">(https://www.medumore.org/course/Otolaryngology)</a> โดยเลือกภาควิชา &rarr; โสต ศอ นาสิกวิทยา &rarr; Otolaryngology for medical students the series</p>
+
+                    <h3>5. Teaching round กับอาจารย์</h3>
+                    <ul class="list-none pl-0 space-y-3">
+                        <li><strong>5.1.</strong> นิสิตแพทย์จะเข้าร่วม teaching round ที่หอผู้ป่วยภูมิสิริมังคลานุสรณ์ ชั้น 15 โซน A เวลา 08.00–09.00 น. ในสัปดาห์ที่ 2</li>
+                        <li><strong>5.2.</strong> ผู้ป่วยที่ใช้ในการเรียนการสอนต้องเป็นผู้ป่วยที่ยังคง admit อยู่ในขณะทำการสอน หากผู้ป่วย discharge แล้วนิสิตต้องเตรียมเคสใหม่ทดแทน</li>
+                        <li><strong>5.3.</strong> นิสิตควรหมุนเวียนกันเป็นผู้นำเสนอเคส และทุกคนควรมีโอกาสเป็นผู้นำเสนอ</li>
+                        <li><strong>5.4.</strong> อาจารย์ผู้มีหน้าที่สอน teaching round ทางภาควิชาฯ จะจัดลำดับอาจารย์และแจ้งแก่นิสิตทราบ</li>
+                        <li><strong>5.5.</strong> นิสิตจะต้องอยู่ประจำวอร์ดและเตรียมความพร้อม ก่อนอาจารย์มาถึง</li>
+                        <li><strong>5.6.</strong> นิสิตควรเตรียมเคสสำหรับการนำเสนอด้วยตนเอง ทั้งการซักประวัติ การตรวจร่างกาย (ภายใต้การดูแลของแพทย์ประจำบ้าน) ห้ามมิให้นิสิตคัดลอกข้อมูลจากเวชระเบียน</li>
+                        <li><strong>5.7.</strong> เนื้อหาการเรียนรู้ประกอบด้วย การซักประวัติ การตรวจร่างกาย การนำเสนอเคส การวิเคราะห์ และแนวทางการดูแลผู้ป่วย</li>
+                        <li><strong>5.8.</strong> <span class="text-red-600 font-medium">การมาสายหลังเวลา 08.00 น. จะถูกประเมินในแบบประเมิน CSA form B1 ว่า “สาย”</span> เว้นแต่มีเหตุจำเป็นให้นิสิตแจ้งอาจารย์เป็นรายกรณี</li>
+                    </ul>
+
+                    <h3>6. การปฏิบัติงานที่ OPD</h3>
+                    <ul class="list-none pl-0 space-y-3">
+                        <li><strong>6.1.</strong> นิสิตปฏิบัติงานที่ OPD อาคาร ภปร ชั้น 12 เวลา 09.00–12.00 น. ในสัปดาห์ที่ 1 โดยจะได้รับเคสผู้ป่วยให้ศึกษาตั้งแต่การซักประวัติ ตรวจร่างกาย การส่งตรวจ วิเคราะห์สาเหตุของโรค และวางแนวทางการรักษา ภายใต้การกำกับดูแลของอาจารย์ ยกเว้น ในวันแรกของสัปดาห์ที่ 1 เวลา 10.00-12.00 น. จะให้นิสิตฝึกตรวจร่างกายทางโสต ศอ นาสิกวิทยาก่อน โดยยังไม่มีผู้ป่วย</li>
+                        <li><strong>6.2.</strong> นิสิตจะได้รับจัดสรรผู้ป่วยให้ในสัดส่วน นิสิต 1-3 คน ต่อผู้ป่วย 1 ราย โดยเจ้าหน้าที่ที่ดูแลนิสิตประจำหอผู้ป่วยนอก จะนำชื่อผู้ป่วยเข้าในระบบของโรงพยาบาลในรายชื่อนิสิต นิสิตสามารถ log in เข้าระบบของโรงพยาบาล เพื่อทำการบันทึกเวชระเบียนได้
+                            <ul class="mt-3 ml-6">
+                                <li><strong>6.2.1.</strong> ทั้งนี้ กรณีที่นิสิต > 1 คนตรวจผู้ป่วยรายเดียวกัน เจ้าหน้าที่จะนำชื่อผู้ป่วยเข้าในระบบชื่อของนิสิตเพียงคนเดียว โดยนิสิตจะต้องกรอก ชื่อ, นามสกุล, รหัสนิสิต, หรือเลขประจำตัวอื่น ๆ ของนิสิตทุกคนที่ดูแลผู้ป่วยรายนั้น ในช่อง chief complaint (CC) เพื่อแสดงว่ามีนิสิตคนใดบ้างที่รับผิดชอบผู้ป่วยรายนั้น หรือใช้ในกรณีอาจารย์ต้องการตรวจสอบความถูกต้องหรือให้คะแนนประเมินนิสิตย้อนหลัง</li>
+                            </ul>
+                        </li>
+                        <li><strong>6.3.</strong> ภายหลังเสร็จสิ้นการเรียนการสอนผู้ป่วย นิสิตต้องให้อาจารย์กดยืนยันและกรอกรหัสของอาจารย์ทุกครั้งในระบบเวชเรียนคอมพิวเตอร์ของโรงพยาบาล</li>
+                        <li><strong>6.4.</strong> <span class="text-red-600 font-medium">การขึ้นปฏิบัติงานหลังเวลา 9.30 น. (หรือ 10.30 น. ในวันแรกของสัปดาห์ที่ 1) จะถูกประเมินในแบบประเมิน CSA form A ว่า “สาย”</span> เว้นแต่มีเหตุจำเป็นให้นิสิตแจ้งอาจารย์เป็นรายกรณี</li>
+                    </ul>
+
+                    <h3>7. การปฏิบัติงานในห้องผ่าตัด (OR)</h3>
+                    <ul class="list-none pl-0 space-y-3">
+                        <li><strong>7.1.</strong> นิสิตควรเตรียมความพร้อมด้านทักษะปลอดเชื้อ เช่น การล้างมือ ใส่ถุงมือ และการเย็บแผล</li>
+                        <li><strong>7.2.</strong> นิสิตสามารถเข้าร่วมสังเกตการณ์หรือช่วยผ่าตัดตามดุลยพินิจของอาจารย์ และเรียนรู้กระบวนการผ่าตัดรวมถึงกายวิภาคศาสตร์จากสถานการณ์จริง</li>
+                        <li><strong>7.3.</strong> ให้นิสิตขึ้นเรียนในห้องผ่าตัดกับอาจารย์ที่ได้รับมอบหมายให้ดูแลการเรียนการสอนนิสิตในห้องผ่าตัด</li>
+                        <li><strong>7.4.</strong> นิสิตควรขึ้นเรียนให้ตรงเวลา และไม่ควรเลิกเรียนก่อนเวลา ยกเว้น หากนิสิตมีเรียน lecture หรืออื่น ๆ หรือตรงกับเวลาพักกลางวัน นิสิตสามารถแจ้งอาจารย์ได้</li>
+                        <li><strong>7.5.</strong> นิสิตจะต้องศึกษาผู้ป่วยที่ได้รับการผ่าตัดในวันนั้น ๆ มาก่อนทุกรายก่อนขึ้นเรียน</li>
+                    </ul>
+
+                    <h3>8. การเช็คชื่อเข้าร่วมกิจกรรม (Attendance)</h3>
+                    <ul class="list-none pl-0 space-y-3">
+                        <li><strong>8.1.</strong> นิสิตจะได้รับใบลงชื่อในรูปแบบไฟล์ PDF และต้องขอลายเซ็นอาจารย์ในทุกกิจกรรมการเรียนการสอน กรณีไม่มีอุปกรณ์ (iPad สำหรับให้อาจารย์ลงชื่อแบบอิเล็กทรอนิกส์) นิสิตสามารถขอใบลงชื่อเข้าเรียนแบบกระดาษจากเจ้าหน้าที่ได้</li>
+                        <li><strong>8.2.</strong> เมื่อสิ้นสุด rotation ให้นำส่งเอกสารผ่าน Google Drive ที่ทางภาควิชาฯ จัดเตรียมไว้</li>
+                    </ul>
+
+                    <h3>9. การปฏิบัติงานช่วงเช้า (Morning round)</h3>
+                    <ul class="list-none pl-0 space-y-3">
+                        <li><strong>9.1.</strong> นิสิตไม่ต้องเข้าร่วม morning round ตามสายกับแพทย์ประจำบ้าน</li>
+                    </ul>
+
+                    <h3>10. การปฏิบัติงานช่วงเย็น (Evening round)</h3>
+                    <ul class="list-none pl-0 space-y-3">
+                        <li><strong>10.1.</strong> นิสิตต้องเข้าร่วมการ round กับแพทย์ประจำบ้านทุกวัน แบ่งตามสาย โดยมีแพทย์ประจำบ้านชั้นปีที่ 2 เป็นผู้ประสานงาน</li>
+                    </ul>
+
+                    <h3>11. การฝึกหัตถการ</h3>
+                    <ul class="list-none pl-0 space-y-3">
+                        <li><strong>11.1.</strong> นิสิตจะเข้ารับการฝึกหัตถการ anterior nasal packing ในหุ่นจำลอง ที่ศูนย์ฝึกทักษะทางคลินิก อาคารภูมิสิริมังคลานุสรณ์ โซน C ชั้น 11 เวลา 13.00-16.00 น. ของวันจันทร์สัปดาห์ที่ 2 (หากตรงกับวันหยุด ตารางอาจมีการเปลี่ยนแปลง) และมีการประเมินผลภายหลังการเรียนในวันนั้นๆ</li>
+                        <li><strong>11.2.</strong> นิสิตต้องศึกษาขั้นตอนการทำ anterior nasal packing ในคู่มือของภาควิชา มาก่อนขึ้นเรียน</li>
+                        <li><strong>11.3.</strong> นิสิตจะเข้ารับการฝึกหัตถการ remove foreign body in ear/nose/throat (easy case) ในหุ่นจำลอง ที่ศูนย์ฝึกทักษะทางคลินิก อาคารภูมิสิริมังคลานุสรณ์ โซน C ชั้น 11 เวลา 13.00-16.00 น. ของวันจันทร์หรืออังคารสัปดาห์ที่ 2 (หากตรงกับวันหยุด ตารางอาจมีการเปลี่ยนแปลง)</li>
+                    </ul>
+
+                    <h3>12. การเขียนรายงานผู้ป่วย</h3>
+                    <ul class="list-none pl-0 space-y-3">
+                        <li><strong>12.1.</strong> นิสิตต้องจัดทำรายงานผู้ป่วยจำนวน 1 ราย โดยไม่ใช้เคสซ้ำกัน กรณีที่นิสิตเขียนเคสซ้ำกัน อาจารย์จะพิจารณาลดคะแนนเต็มลงตามสัดส่วนของจำนวนนิสิตที่ใช้เคสซ้ำกัน (กรณีที่เคสผู้ป่วยไม่เพียงพอ และมีความจำเป็นอย่างยิ่งที่จะต้องใช้เคสซ้ำกัน ให้นิสิตติดต่อและแจ้งอาจารย์เลขานุการ หรือผู้ช่วยเลขานุการประจำรายวิชาให้ทราบก่อน) และต้องเขียนตามรูปแบบที่กำหนดในระบบ Doc Q</li>
+                        <li><strong>12.2.</strong> เคสที่เลือกควรเป็นผู้ป่วยที่ admit และมีการผ่าตัด เพื่อให้นิสิตได้เรียนรู้ตั้งแต่ก่อนการผ่าตัด การผ่าตัด และการดูแลผู้ป่วยหลังผ่าตัด</li>
+                        <li><strong>12.3.</strong> กรณีเคสผู้ป่วยที่รับปรึกษาในเวร ถ้าผู้ป่วยได้รับการรักษาแบบผู้ป่วยใน นิสิตสามารถนำมาใช้เขียนรายงานได้ (เฉพาะเคสที่ได้รับปรึกษาจากห้องฉุกเฉินหรือห้องตรวจผู้ป่วยนอก นอกเวลาเท่านั้น กรณีผู้ป่วยที่ได้รับปรึกษาจากต่างแผนก ไม่สามารถนำมาเขียนรายงานได้) แต่ถ้าผู้ป่วยได้รับการรักษาแบบผู้ป่วยนอกเท่านั้น นิสิตไม่สามารถนำมาใช้ในการเขียนรายงานได้</li>
+                        <li><strong>12.4.</strong> นิสิตควรฝึกซักประวัติ และตรวจร่างกายด้วยตนเองภายใต้การดูแลของแพทย์ประจำบ้าน หลีกเลี่ยงการคัดลอกประวัติ หรือการตรวจร่างกายจากแพทย์ประจำบ้านหรือเวชระเบียน</li>
+                        <li><strong>12.5.</strong> ผู้ป่วยรายอื่นในหอผู้ป่วยที่นิสิตไม่ได้ใช้เขียนรายงาน ให้นิสิตแบ่งกันรับผิดชอบและเขียน on-service note ทุกเคส</li>
+                        <li><strong>12.6.</strong> <span class="font-medium text-olive-800">นิสิตต้องส่งรายงานภายในวันศุกร์ของสัปดาห์ที่ 2 ไม่เกินเวลา 23.59 น.</span> (นิสิตควรหลีกเลี่ยงการส่งใกล้ระยะครบกำหนดเวลา เพื่อหลีกเลี่ยงปัญหาต่าง ๆ เช่น ระบบอิเล็กทรอนิกส์ล่าช้าหรือขัดข้อง) หากส่งเกินกำหนดเวลา นิสิตจะได้รับคะแนนประเมินไม่เกินร้อยละ 50 ของคะแนนรายงาน กรณีที่นิสิตไม่สามารถส่งรายงานในระบบได้ ให้รีบติดต่อคุณเกศแก้ว เจ้าหน้าที่ภาควิชา เพื่อดำเนินการต่อไป</li>
+                    </ul>
+
+                    <h3>13. การอยู่เวร</h3>
+                    <ul class="list-none pl-0 space-y-3">
+                        <li><strong>13.1.</strong> นิสิตต้องอยู่เวรสัปดาห์ละ 2 ครั้ง ในช่วงเวลา 16.00–22.00 น. ยกเว้นวันหยุดราชการและวันหยุดนักขัตฤกษ์ (ในวันทำการก่อนวันสอบ หรือหลังวันสอบใด ๆ ให้นิสิตอยู่เวรตามปกติ)</li>
+                        <li><strong>13.2.</strong> นิสิตสามารถอยู่เวรในบริเวณใดก็ได้ในเขตโรงพยาบาล โดยไม่ต้องนั่งประจำหอผู้ป่วย แต่หากมีการได้รับการติดต่อจากแพทย์ประจำบ้านให้มาศึกษาเคส นิสิตต้องสามารถมาถึงภายในไม่เกิน 15 นาที</li>
+                        <li><strong>13.3.</strong> กรณีแพทย์ประจำบ้านไม่สามารถตามนิสิตได้ ให้ถือว่านิสิตขาดการปฏิบัติงานอยู่เวรในวันนั้นๆ และต้องมาปฏิบัติงานอยู่เวรทดแทนเพิ่มเติม</li>
+                        <li><strong>13.4.</strong> กรณีนิสิตมาปฏิบัติงานเกินกว่า 15 นาทีภายหลังจากการได้รับการติดต่อจากแพทย์ประจำบ้าน จะพิจารณาเป็นรายกรณี</li>
+                        <li><strong>13.5.</strong> นิสิตต้องให้แพทย์ประจำบ้านชั้นปีที่ 2 (เท่านั้น) ลงนามรับรองการอยู่เวรในวันนั้น ๆ โดยต้องลงนามภายในวันที่อยู่เวร (กรณีมีเคส) หรือภายในวันถัดมา (ให้นิสิตแพทย์เป็นผู้ติดต่อแพทย์ประจำบ้านเพื่อขอการลงนาม) โดยนิสิตสามารถติดต่อแพทย์ประจำบ้าน เพื่อขอการลงนามแบบอิเล็กทรอนิกส์ได้</li>
+                        <li><strong>13.6.</strong> นิสิตแพทย์เวรต้องทำตารางเวร และแจ้งหมายเลขโทรศัพท์ติดต่อให้แพทย์ประจำบ้านที่อยู่เวรทราบ</li>
+                    </ul>
+
+                    <h3>14. การลา</h3>
+                    <ul class="list-none pl-0 space-y-3">
+                        <li><strong>14.1.</strong> ระเบียบการลาให้นิสิตอ้างอิงตามประกาศ คณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย เรื่อง แนวปฏิบัติในการลาของนิสิตในหลักสูตรแพทยศาสตร์บัณฑิต พ.ศ.2569 (เอกสารแนบ 2)</li>
+                    </ul>
+
+                    <h3>15. การเรียนกับแพทย์ประจำบ้าน</h3>
+                    <ul class="list-none pl-0 space-y-3">
+                        <li><strong>15.1.</strong> นิสิตต้องเข้าร่วมการเรียนกับแพทย์ประจำบ้านชั้นปีที่ 2 ในหัวข้อ Tracheostomy care และ Emergency conditions in ENT</li>
+                    </ul>
+                </section>
+
+                <section id="section-evaluation" class="scroll-mt-10">
+                    <h2>การประเมินผล</h2>
+                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                        <table class="mb-0 border-0">
+                            <thead>
+                                <tr>
+                                    <th class="border-t-0 border-l-0 text-lg">หัวข้อการประเมิน</th>
+                                    <th class="border-t-0 border-r-0 text-right w-32 text-lg">คะแนน</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2" class="font-bold bg-gray-50 border-x-0 text-lg">1. การประเมินความรู้และทักษะทางปัญญา</td>
+                                </tr>
+                                <tr>
+                                    <td class="pl-8 border-x-0">1.1 การสอบข้อเขียน (paper-based exam) ด้วยข้อสอบ MCQs</td>
+                                    <td class="text-right font-medium border-x-0 text-lg">50 คะแนน</td>
+                                </tr>
+                                <tr>
+                                    <td class="pl-8 border-x-0">1.2 การประเมินในสถานการณ์จำลอง (OSCE anterior nasal packing)</td>
+                                    <td class="text-right font-medium border-x-0 text-lg">10 คะแนน</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="font-bold bg-gray-50 border-x-0 text-lg">2. การประเมินพฤติกรรมในการเรียนและปฏิบัติงาน</td>
+                                </tr>
+                                <tr>
+                                    <td class="pl-8 border-x-0">2.1 ความสามารถในการบริบาลผู้ป่วยนอก (CSA form A)</td>
+                                    <td class="text-right font-medium border-x-0 text-lg">20 คะแนน</td>
+                                </tr>
+                                <tr>
+                                    <td class="pl-8 border-x-0">2.2 พฤติกรรมในการเรียนข้างเตียง (bedside teaching - CSA form B1)</td>
+                                    <td class="text-right font-medium border-x-0 text-lg">10 คะแนน</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="font-bold bg-gray-50 border-x-0 text-lg">3. การประเมินผลงาน</td>
+                                </tr>
+                                <tr>
+                                    <td class="pl-8 border-x-0">3.1 งานรายบุคคล การนำเสนอรายงานผู้ป่วยส่งผ่านระบบ DocQ MD (CSA form R)</td>
+                                    <td class="text-right font-medium border-x-0 text-lg">10 คะแนน</td>
+                                </tr>
+                                <tr class="bg-olive-50 font-bold">
+                                    <td class="text-right border-x-0 border-b-0 text-olive-800 text-xl">รวม</td>
+                                    <td class="text-right border-x-0 border-b-0 text-olive-800 text-xl">100 คะแนน</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="section-contacts" class="scroll-mt-10">
+                    <h2>ข้อมูลติดต่อของภาควิชาโสต ศอ นาสิกวิทยา</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
+                            <p class="text-base text-gray-500 mb-1">ประธานรายวิชา & หัวหน้าภาควิชา</p>
+                            <p class="font-semibold text-gray-800 text-lg mb-0">ศ. พญ.สุพินดา ชูสกุล</p>
+                        </div>
+                        <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
+                            <p class="text-base text-gray-500 mb-1">เลขานุการรายวิชา</p>
+                            <p class="font-semibold text-gray-800 text-lg mb-0">ผศ. พญ.เปรมสุดา สมบุญธรรม</p>
+                            <p class="text-sm text-olive-600 mt-1">ติดต่อ: ธุรการภาควิชา</p>
+                        </div>
+                        <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
+                            <p class="text-base text-gray-500 mb-1">ผู้ช่วยเลขานุการรายวิชา</p>
+                            <p class="font-semibold text-gray-800 text-lg mb-0">ผศ. พญ.ประภิศพันธุ์ เจริญลักษณ์</p>
+                            <p class="text-sm text-olive-600 mt-1">ติดต่อ: ธุรการภาควิชา</p>
+                        </div>
+                        <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
+                            <p class="text-base text-gray-500 mb-1">อาจารย์ผู้ดูแลรายวิชา</p>
+                            <p class="font-semibold text-gray-800 text-lg mb-0">อ. พญ.พิมรฎา โพธิพิมพานนท์</p>
+                            <p class="text-sm text-olive-600 mt-1">ติดต่อ: ธุรการภาควิชา</p>
+                        </div>
+                        <div class="md:col-span-2 bg-olive-100 p-6 rounded-xl border border-olive-200 shadow-sm flex items-start gap-5 mt-2">
+                            <i data-lucide="user-check" class="w-10 h-10 text-olive-700 shrink-0 mt-1"></i>
+                            <div>
+                                <p class="text-base text-olive-800 font-bold mb-1">เจ้าหน้าที่ธุรการภาควิชาฝ่ายปริญญาบัณฑิต (ผู้ดูแลรายวิชา)</p>
+                                <p class="font-bold text-gray-900 text-xl mb-2">น.ส. เกศแก้ว เกตุมณี (พี่เดียร์)</p>
+                                <p class="text-gray-800 text-base mb-0 flex items-center gap-2 font-medium"><i data-lucide="phone" class="w-5 h-5"></i> โทร 02-256-4000 ต่อ 61724 หรือเบอร์ 085-886-8364</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="section-appendix" class="scroll-mt-10">
+                    <h2>ภาคผนวก: ข้อตกลงและข้อปฏิบัติร่วมกัน</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                        <!-- Box 1 -->
+                        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+                            <h4 class="font-bold text-olive-800 text-lg flex items-center gap-3 border-b border-gray-100 pb-3 mb-4"><i data-lucide="building" class="w-6 h-6 text-olive-600"></i> 1. ข้อปฏิบัติบนหอผู้ป่วย</h4>
+                            <ol class="text-base pl-5 mb-0 space-y-2">
+                                <li>การแต่งกายยึดตามระเบียบจุฬาฯ ทั้งการเรียนและการดูแลผู้ป่วย <span class="text-red-600 font-medium">งดเว้นการทาเล็บ ไว้เล็บยาว ย้อมผมสีที่ผิดธรรมชาติ</span> เพื่อรักษาสุขอนามัยที่ดี</li>
+                                <li>ติดป้ายชื่อแสดงตนตลอดเวลา</li>
+                                <li>สำรวมกิริยาวาจา หลีกเลี่ยงการส่งเสียงดัง</li>
+                                <li>สนทนาและตรวจร่างกายด้วยความเคารพ แนะนำตนเองก่อนทุกครั้ง และควรมีบุคคลที่ 3 อยู่ด้วยทุกครั้ง</li>
+                                <li><strong>ไม่ถ่ายภาพผู้ป่วย ประวัติผู้ป่วย หรือภาพตนเองในหอผู้ป่วย</strong></li>
+                                <li>ระมัดระวังการกล่าวถึงผู้ป่วยในที่สาธารณะ เช่น ในลิฟต์ หรือโรงอาหาร</li>
+                                <li>ไม่นำแฟ้มประวัติออกนอกหอผู้ป่วย</li>
+                                <li>ตรงต่อเวลา</li>
+                            </ol>
+                        </div>
+                        
+                        <!-- Box 2 -->
+                        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+                            <h4 class="font-bold text-olive-800 text-lg flex items-center gap-3 border-b border-gray-100 pb-3 mb-4"><i data-lucide="scissors" class="w-6 h-6 text-olive-600"></i> 2. ข้อปฏิบัติในห้องผ่าตัด</h4>
+                            <ol class="text-base pl-5 mb-0 space-y-2">
+                                <li>เตรียมความพร้อมล่วงหน้า ศึกษาเคสผู้ป่วยและทบทวนความรู้ที่เกี่ยวข้อง</li>
+                                <li>ปฏิบัติตามหลัก Aseptic technique อย่างเคร่งครัด</li>
+                                <li>รับฟังและปฏิบัติตามคำแนะนำของอาจารย์ แพทย์ประจำบ้าน และพยาบาล</li>
+                            </ol>
+                        </div>
+
+                        <!-- Box 3 -->
+                        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+                            <h4 class="font-bold text-olive-800 text-lg flex items-center gap-3 border-b border-gray-100 pb-3 mb-4"><i data-lucide="stethoscope" class="w-6 h-6 text-olive-600"></i> 3. ข้อปฏิบัติที่ห้องตรวจผู้ป่วยนอก</h4>
+                            <ol class="text-base pl-5 mb-0 space-y-2">
+                                <li>การแต่งกายยึดตามระเบียบจุฬาฯ เช่นเดียวกับข้อปฏิบัติบนหอผู้ป่วย</li>
+                                <li>ซักประวัติและตรวจร่างกายด้วยความเคารพสิทธิผู้ป่วย</li>
+                                <li><strong>ห้าม</strong> แจ้งผลการตรวจหรือผลชิ้นเนื้อแก่ผู้ป่วยโดยตรง หากไม่มีอาจารย์หรือแพทย์ประจำบ้านอยู่ด้วย</li>
+                            </ol>
+                        </div>
+
+                        <!-- Box 4 -->
+                        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+                            <h4 class="font-bold text-olive-800 text-lg flex items-center gap-3 border-b border-gray-100 pb-3 mb-4"><i data-lucide="moon" class="w-6 h-6 text-olive-600"></i> 4. ข้อปฏิบัติในการอยู่เวร</h4>
+                            <p class="text-base mb-0 leading-relaxed">ให้อ้างอิงตามข้อปฏิบัติในคู่มือนิสิตด้านบน (ข้อ 13. การอยู่เวร)</p>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Initialize Scripts -->
+    <script>
+        // 1. Initialize Lucide Icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        } else {
+            console.error('Lucide library could not be loaded.');
+        }
+
+        // 2. Robust Smooth Scrolling Script for TOC Links
+        document.addEventListener('DOMContentLoaded', () => {
+            const tocLinks = document.querySelectorAll('.toc-link');
+            
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); 
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        if (history.pushState) {
+                            history.pushState(null, null, targetId);
+                        } else {
+                            window.location.hash = targetId;
+                        }
+
+                        // เปลี่ยนแถบสีไฮไลต์ในสารบัญเวลากด
+                        tocLinks.forEach(l => {
+                            l.classList.remove('text-olive-700', 'bg-olive-50');
+                            l.classList.add('text-gray-600');
+                        });
+                        this.classList.remove('text-gray-600');
+                        this.classList.add('text-olive-700', 'bg-olive-50');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
