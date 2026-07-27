@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>คู่มือนิสิตแพทย์ - รายวิชาโสต ศอ นาสิกวิทยา</title>
+    <title>ตารางกิจกรรม - คู่มือนิสิตแพทย์</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Prompt -->
@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
 
     <script>
         tailwind.config = {
@@ -41,15 +41,12 @@
     <style>
         body {
             font-family: 'Prompt', sans-serif;
-            background-color: #f9faf7; /* Very light olive-tinted background */
+            background-color: #f9faf7; 
         }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-        }
-        /* Custom scrollbar for webkit */
+        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
+            height: 8px;
         }
         ::-webkit-scrollbar-track {
             background: #f1f1f1; 
@@ -61,143 +58,418 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #586f40; 
         }
+        /* Content formatting */
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #38462b;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e7ede0;
+        }
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #586f40;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        /* Custom Table Styling */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        th {
+            background-color: #f5f7f2;
+            color: #455734;
+            font-weight: 600;
+            text-align: center;
+            padding: 0.75rem;
+            border: 1px solid #d0dbc3;
+        }
+        td {
+            padding: 0.75rem;
+            border: 1px solid #e7ede0;
+            color: #4b5563;
+        }
+        tr:nth-child(even) td {
+            background-color: #fafbf9;
+        }
     </style>
 </head>
-<body class="text-gray-800 antialiased">
+<body class="text-gray-800 antialiased pb-16">
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-16 pb-16 md:pt-24 md:pb-24 bg-olive-50 relative overflow-hidden">
-        <!-- Background decorative elements -->
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 opacity-30">
-            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-olive-200 blur-3xl"></div>
-            <div class="absolute top-48 -left-24 w-72 h-72 rounded-full bg-olive-300 blur-3xl"></div>
+    <!-- Page Header -->
+    <div class="pt-12 pb-12 bg-olive-50 border-b border-olive-100 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-olive-200 rounded-full blur-3xl opacity-40 -translate-y-1/2 translate-x-1/3"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">ตารางกิจกรรมการเรียนการสอน<br><span class="text-olive-600">โสต ศอ นาสิกวิทยา</span></h1>
+            <p class="text-xl text-olive-700 font-medium">รายวิชา 3000525 | คณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย</p>
         </div>
+    </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="text-center max-w-4xl mx-auto">
-                <span class="inline-block py-1 px-4 rounded-full bg-olive-100 text-olive-800 text-sm font-semibold mb-6 border border-olive-200">
-                    ปีการศึกษา 2569 | ภาควิชาโสต ศอ นาสิกวิทยา คณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย
-                </span>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
-                    คู่มือนิสิตแพทย์<br>
-                    <span class="text-olive-600">รายวิชาโสต ศอ นาสิกวิทยา</span>
-                </h1>
-                <p class="text-xl md:text-2xl font-semibold text-olive-700 mb-8">Course 3000525</p>
-                
-                <div class="inline-flex items-center gap-2 bg-red-50 text-red-600 px-6 py-3 rounded-xl border border-red-200 font-medium text-sm md:text-base shadow-sm">
-                    <i data-lucide="info" class="w-5 h-5 shrink-0"></i>
-                    *กรุณาอ่านคู่มือนิสิตแพทย์ทุกครั้งก่อนขึ้นเรียน
+    <!-- Main Content Area -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <div class="bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-olive-100">
+            
+            <!-- Table of Contents (สารบัญ) -->
+            <div class="mb-10 p-6 bg-olive-50 rounded-2xl border border-olive-100 shadow-sm">
+                <h2 class="text-xl font-bold text-olive-800 mb-4 mt-0 border-none pb-0 flex items-center gap-2">
+                    <i data-lucide="list" class="w-6 h-6"></i> สารบัญตารางกิจกรรม
+                </h2>
+                <!-- ปรับเป็น 2 คอลัมน์เพื่อให้เรียง 4 ข้อได้สวยงาม -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <!-- เพิ่ม class 'toc-link' เพื่อให้ JS ดักจับการคลิก -->
+                    <a href="#section-schedule-doc" class="toc-link flex items-center gap-3 bg-white px-4 py-3 rounded-xl border border-olive-200 hover:bg-olive-600 hover:text-white hover:border-olive-600 transition-colors text-gray-700 text-sm font-medium group shadow-sm">
+                        <i data-lucide="file-spreadsheet" class="w-5 h-5 text-olive-500 group-hover:text-white transition-colors shrink-0"></i> 
+                        <span>ตารางสอนต้นฉบับ (Google Sheets)</span>
+                    </a>
+                    <a href="#overview-schedule" class="toc-link flex items-center gap-3 bg-white px-4 py-3 rounded-xl border border-olive-200 hover:bg-olive-600 hover:text-white hover:border-olive-600 transition-colors text-gray-700 text-sm font-medium group shadow-sm">
+                        <i data-lucide="calendar-days" class="w-5 h-5 text-olive-500 group-hover:text-white transition-colors shrink-0"></i> 
+                        <span>ภาพรวมตารางเรียน</span>
+                    </a>
+                    <a href="#or-schedule" class="toc-link flex items-center gap-3 bg-white px-4 py-3 rounded-xl border border-olive-200 hover:bg-olive-600 hover:text-white hover:border-olive-600 transition-colors text-gray-700 text-sm font-medium group shadow-sm">
+                        <i data-lucide="scissors" class="w-5 h-5 text-olive-500 group-hover:text-white transition-colors shrink-0"></i> 
+                        <span>ตารางอาจารย์ดูแลนิสิตแพทย์ชั้นปีที่ 5 ห้องผ่าตัด</span>
+                    </a>
+                    <a href="#resident-list" class="toc-link flex items-center gap-3 bg-white px-4 py-3 rounded-xl border border-olive-200 hover:bg-olive-600 hover:text-white hover:border-olive-600 transition-colors text-gray-700 text-sm font-medium group shadow-sm">
+                        <i data-lucide="users" class="w-5 h-5 text-olive-500 group-hover:text-white transition-colors shrink-0"></i> 
+                        <span>รายชื่อของแพทย์ประจำบ้านที่ดูแลนิสิต</span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Important Notice Section -->
-    <section class="py-8 bg-olive-100 border-y border-olive-200">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row items-center gap-6 bg-white p-6 md:p-8 rounded-2xl shadow-sm border-l-4 border-l-red-500 border-t border-r border-b border-olive-100">
-                <div class="bg-red-100 text-red-600 p-3 rounded-full shrink-0">
-                    <i data-lucide="alert-triangle" class="w-8 h-8"></i>
-                </div>
-                <div class="w-full">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">ข้อปฏิบัติสำคัญก่อนเข้าพื้นที่</h3>
-                    <ul class="text-gray-700 text-lg mb-4 font-medium space-y-2 list-disc list-inside marker:text-red-500">
-                        <li>กรุณาแลกบัตรที่ประชาสัมพันธ์ทุกครั้งก่อนเข้ามาเรียนในพื้นที่ภาควิชาโสต ศอ นาสิกวิทยา ชั้น 17</li>
-                    </ul>
-                    
-                    <!-- Mobile Scroll Warning -->
-                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 flex items-start gap-3 shadow-sm">
-                        <i data-lucide="info" class="w-5 h-5 text-blue-600 shrink-0 mt-0.5"></i>
-                        <p class="text-sm md:text-base text-blue-800 mb-0 font-medium leading-relaxed">
-                            <span class="text-red-600 font-bold">หน้าเว็บอาจโดนซ่อนและแสดงผลไม่เต็มจอ กรุณาสังเกตให้ดีว่ายังสามารถเลื่อนลงไปดูเนื้อหาด้านล่างได้อีก สังเกตสกอร์บาร์ด้านข้างว่าเลื่อนสุดหรือยัง</span> เพื่อการอ่านที่ดีให้ใช้ไอแพดหรือคอมพิวเตอร์ในการแสดงผลถึงจะมีประสิทธิภาพที่สุด
+            <!-- Quick Info Notice -->
+            <section id="section-intro" class="scroll-mt-10 mb-10">
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r-xl flex gap-4 items-start shadow-sm">
+                    <i data-lucide="info" class="w-6 h-6 text-blue-600 shrink-0 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-blue-900 text-lg mb-1">ข้อมูลเบื้องต้น</h4>
+                        <p class="text-blue-800 text-base mb-0">
+                            นิสิตแพทย์จะเข้าศึกษาในรูปแบบ Rotation ระยะเวลา 2 สัปดาห์ โดยสลับการปฏิบัติงานระหว่างสาย A และสาย B<br>
+                            <strong>สาย A:</strong> นสพ. No. 1-6 (สัปดาห์ 1) / นสพ. No. 7-12 (สัปดาห์ 2)<br>
+                            <strong>สาย B:</strong> นสพ. No. 7-12 (สัปดาห์ 1) / นสพ. No. 1-6 (สัปดาห์ 2)
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Main Categories -->
-    <section id="categories" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">เมนูการเรียนการสอน</h2>
-                <div class="w-24 h-1 bg-olive-500 mx-auto rounded-full"></div>
-            </div>
-
-            <!-- Primary Menus (Big Cards) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <!-- Menu 1 (Big) - ตารางกิจกรรม -->
-                <a href="https://sites.google.com/view/3000525otolaryngology/%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%A2%E0%B8%99" class="group bg-white border-2 border-olive-100 rounded-3xl p-10 md:p-14 shadow-md hover:shadow-2xl hover:border-olive-400 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
-                    <div class="w-28 h-28 bg-olive-50 text-olive-600 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-olive-600 group-hover:text-white transition-colors shadow-sm">
-                        <i data-lucide="calendar-days" class="w-14 h-14"></i>
+            <!-- Section: Schedule Document Embed -->
+            <section id="section-schedule-doc" class="scroll-mt-10 mb-12 pt-4">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-2 h-8 bg-olive-600 rounded-full"></div>
+                        <h2 class="mt-0 mb-0 border-none pb-0 text-2xl">ตารางสอนต้นฉบับ (Google Sheets)</h2>
                     </div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-olive-700 transition-colors">ตารางกิจกรรม</h3>
-                    <p class="text-gray-500 font-medium">ดูตารางเรียนและการปฏิบัติงาน</p>
-                </a>
-
-                <!-- Menu 3 (Big) - คู่มือนิสิตแพทย์ -->
-                <a href="https://sites.google.com/view/3000525otolaryngology/%E0%B8%84%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B8%AA%E0%B8%95" class="group bg-white border-2 border-olive-100 rounded-3xl p-10 md:p-14 shadow-md hover:shadow-2xl hover:border-olive-400 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
-                    <div class="w-28 h-28 bg-olive-50 text-olive-600 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-olive-600 group-hover:text-white transition-colors shadow-sm">
-                        <i data-lucide="book-open" class="w-14 h-14"></i>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-olive-700 transition-colors">คู่มือนิสิตแพทย์</h3>
-                    <p class="text-gray-500 font-medium">ข้อบังคับและแนวทางการปฏิบัติ</p>
-                </a>
-            </div>
-
-            <!-- Secondary Menus (Smaller Cards, adjusted to be larger but still secondary) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <!-- Menu 2 (Medium) - เอกสารประกอบการเรียน -->
-                <a href="https://sites.google.com/view/3000525otolaryngology/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B2%E0%B8%87%E0%B9%86" class="group bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:border-olive-300 transition-all duration-300 transform hover:-translate-y-1 flex items-center text-left gap-6">
-                    <div class="w-20 h-20 shrink-0 bg-olive-50 text-olive-600 rounded-2xl flex items-center justify-center group-hover:bg-olive-600 group-hover:text-white transition-colors shadow-sm">
-                        <i data-lucide="monitor-play" class="w-10 h-10"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-olive-700 transition-colors">เอกสารประกอบการเรียน<br>และลิงก์วีดีโอ</h3>
-                    </div>
-                </a>
-
-                <!-- Menu 4 (Medium) - สแกนเข้าร่วมกลุ่ม -->
-                <a href="https://sites.google.com/view/3000525otolaryngology/qr-openchat" class="group bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:border-olive-300 transition-all duration-300 transform hover:-translate-y-1 flex items-center text-left gap-6">
-                    <div class="w-20 h-20 shrink-0 bg-olive-50 text-olive-600 rounded-2xl flex items-center justify-center group-hover:bg-olive-600 group-hover:text-white transition-colors shadow-sm">
-                        <i data-lucide="qr-code" class="w-10 h-10"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-olive-700 transition-colors">สแกนเข้าร่วมกลุ่ม</h3>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer / Contact -->
-    <footer id="contact" class="bg-gray-50 border-t border-gray-200 py-8 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-                <div>
-                    <h3 class="text-sm font-bold text-gray-700 mb-1">ติดต่อภาควิชาโสต ศอ นาสิกวิทยา</h3>
-                    <p class="text-xs text-gray-500 mb-0">อาคารรัตนวิทยาพัฒน์ ชั้น 17 โซนเอ คณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย</p>
+                    <a href="https://docs.google.com/spreadsheets/d/16qdr0AVU7yZs6co58_43Q3cDK_Qubr6NyANKWGMdhBI/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-base bg-olive-600 hover:bg-olive-700 text-white px-5 py-2.5 rounded-xl font-bold transition-colors shadow-sm shrink-0">
+                        <i data-lucide="external-link" class="w-5 h-5"></i> เปิดดูตารางแบบเต็มจอ
+                    </a>
                 </div>
-                <div class="text-sm text-gray-600">
-                    <p class="mb-1 flex items-center justify-center md:justify-end gap-2 font-medium">
-                        <i data-lucide="phone" class="w-4 h-4 text-olive-600"></i> 
-                        02-256-4000 ต่อ 61724 หรือ 085-886-8364 (พี่เดียร์)
+                
+                <!-- กำหนดความสูง iframe ให้ครอบคลุม -->
+                <div class="w-full h-[500px] md:h-[700px] rounded-2xl overflow-hidden border-2 border-olive-100 shadow-sm bg-gray-50 relative opacity-95 hover:opacity-100 transition-opacity">
+                    <!-- ใช้ /preview เพื่อให้แสดงผลแบบอ่านง่าย -->
+                    <iframe src="https://docs.google.com/spreadsheets/d/16qdr0AVU7yZs6co58_43Q3cDK_Qubr6NyANKWGMdhBI/preview" class="w-full h-full border-none" allow="autoplay"></iframe>
+                </div>
+                
+                <hr class="my-10 border-t-2 border-dashed border-olive-100">
+            </section>
+
+            <!-- ภาพรวมตารางเรียน Header -->
+            <div id="overview-schedule" class="text-center mb-10 mt-4 scroll-mt-10 pt-4">
+                <h2 class="inline-block border-b-4 border-olive-500 pb-2 text-2xl md:text-3xl text-olive-800 mt-0 mb-0 font-bold border-t-0 border-x-0">ภาพรวมตารางเรียน</h2>
+            </div>
+
+            <!-- Schedule Week 1 -->
+            <section id="week1" class="scroll-mt-10 mb-12">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-2 h-6 bg-olive-600 rounded-full"></div>
+                    <h3 class="mt-0 mb-0 border-none pb-0 text-xl font-bold text-gray-800">ตารางสัปดาห์ที่ 1</h3>
+                </div>
+                
+                <div class="overflow-x-auto border border-gray-200 rounded-xl shadow-sm">
+                    <table class="mb-0 min-w-[900px]">
+                        <thead>
+                            <tr>
+                                <th class="w-32 font-bold bg-olive-100">วัน/เวลา</th>
+                                <th class="font-bold bg-olive-50">จันทร์</th>
+                                <th class="font-bold bg-olive-50">อังคาร</th>
+                                <th class="font-bold bg-olive-50">พุธ</th>
+                                <th class="font-bold bg-olive-50">พฤหัสบดี</th>
+                                <th class="font-bold bg-olive-50">ศุกร์</th>
+                            </tr>
+                        </thead>
+                        <tbody class="align-top text-sm">
+                            <tr>
+                                <td class="font-medium whitespace-nowrap bg-gray-50 text-center align-middle text-olive-800">08.00 – 09.00 น.</td>
+                                <td>Introduction to otolaryngology (Interact Lect.)<br><span class="text-gray-500 text-xs block mt-1">ผศ.พญ.ประภิศพันธุ์ เจริญลักษณ์</span></td>
+                                <td>Epistaxis (Lect.)<br><span class="text-gray-500 text-xs block mt-1">ผศ.ดร.นพ.ขจร เสรีศิริขจร</span></td>
+                                <td>Management of upper airway Obstruction and Tracheostomy Complications (Lect.)<br><span class="text-gray-500 text-xs block mt-1">อ.พญ.พีรดา อารีนิจ</span></td>
+                                <td>Oral and Salivary gland disease (Lect.)<br><span class="text-gray-500 text-xs block mt-1">อ.นพ.วิศรุต สามัคคีธรรม</span></td>
+                                <td>Disease of larynx (Lect.)<br><span class="text-gray-500 text-xs block mt-1">ผศ.(พิเศษ) พญ.ภัทร์นฤน มหัธนสกุล</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium whitespace-nowrap bg-gray-50 text-center align-middle text-olive-800">9.00 - 10.00 น.</td>
+                                <td>Upper Respiratory Infections and Nasal Cavity Disorders (Lect.)<br><span class="text-gray-500 text-xs block mt-1">อ.นพ.เปรม หวังเจริญ</span></td>
+                                <td rowspan="2" class="align-middle text-center bg-blue-50/50 font-medium border-l border-blue-100">OPD กลุ่ม 1+2<br>OR กลุ่ม 3</td>
+                                <td rowspan="2" class="align-middle text-center bg-blue-50/50 font-medium border-l border-blue-100">OPD กลุ่ม 2+3<br>OR กลุ่ม 1</td>
+                                <td rowspan="2" class="align-middle text-center bg-blue-50/50 font-medium border-l border-blue-100">OPD กลุ่ม 1+3<br>OR กลุ่ม 2</td>
+                                <td rowspan="2" class="align-middle text-center bg-blue-50/50 font-medium border-l border-blue-100">OPD กลุ่ม 1+2<br>OR กลุ่ม 3</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium whitespace-nowrap bg-gray-50 text-center align-middle text-olive-800">10.00 - 12.00 น.</td>
+                                <td class="bg-green-50 font-medium text-center border-t border-green-100">ฝึกการตรวจร่างกายทาง ENT (ภปร.12)<br><span class="text-green-700 block mt-1">OPD กลุ่ม 1+2+3</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium whitespace-nowrap bg-gray-50 text-center align-middle text-olive-800">12.00 - 13.00 น.</td>
+                                <td colspan="5" class="text-center bg-gray-100 font-medium text-gray-500 text-base py-3 tracking-widest border-y border-gray-200">พักกลางวัน</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium whitespace-nowrap bg-gray-50 text-center align-middle text-olive-800">13.00 – 14.00 น.</td>
+                                <td><span class="font-bold text-xs text-olive-700 bg-olive-100 px-2 py-0.5 rounded">(13.00-13.30)</span><br>Disease of Paranasal Sinus (Q&A)<br><span class="text-gray-500 text-xs block mt-1 mb-2">รศ. นพ.เจษฎา กาญจนอัมพร</span><span class="font-bold text-xs text-olive-700 bg-olive-100 px-2 py-0.5 rounded">(13.30-14.00)</span><br>Foreign body of ear and aerodigestive tract (Q&A)<br><span class="text-gray-500 text-xs block mt-1">ผศ.พญ.เปรมสุดา สมบุญธรรม</span></td>
+                                <td>Approach to Neck mass (Lect.)<br><span class="text-gray-500 text-xs block mt-1">อ.นพ.วรุตม์ ศุภนคร</span></td>
+                                <td>Basic Audiology (Lect.)<br><span class="text-gray-500 text-xs block mt-1">อ.นพ.ธัชพงศ์ โปกุล</span></td>
+                                <td class="bg-yellow-50 text-center font-bold align-middle text-lg text-yellow-800 border-l border-yellow-100">EBM</td>
+                                <td>Obstructive Sleep Apnea (Lect.)<br><span class="text-gray-500 text-xs block mt-1">ผศ.(พิเศษ) พญ.นทมณฑ์ ชรากร</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium whitespace-nowrap bg-gray-50 text-center align-middle text-olive-800">14.00 - 15.00 น.</td>
+                                <td><span class="font-bold text-xs text-olive-700 bg-olive-100 px-2 py-0.5 rounded">(14.00-15.30)</span><br>Otorrhea (Lect.)<br><span class="text-gray-500 text-xs block mt-1">ผศ.พญ.ภาณินี จารุศรีพันธุ์</span></td>
+                                <td>Basic Otology/ Neurotology (Lect.)<br><span class="text-gray-500 text-xs block mt-1">อ.พญ.พิมรฎา โพธิพิมพานนท์</span></td>
+                                <td><span class="font-bold text-xs text-olive-700 bg-olive-100 px-2 py-0.5 rounded">(14.00-14.30)</span><br>Allergic and non-allergic rhinitis (Q&A)<br><span class="text-gray-500 text-xs block mt-1">ศ. พญ.สุพินดา ชูสกุล</span></td>
+                                <td>Approach to upper airway obstruction (Lect.)<br><span class="text-gray-500 text-xs block mt-1">อ.พญ.อวิกา เมฆศุกรีย์</span></td>
+                                <td rowspan="2" class="text-center text-gray-500 align-middle bg-gray-50 font-medium">Record lecture / SDL</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium whitespace-nowrap bg-gray-50 text-center align-middle text-olive-800">15.00 - 16.00 น.</td>
+                                <td class="text-center text-gray-500 bg-gray-50 align-middle font-medium border-t border-gray-100">Record lecture / SDL</td>
+                                <td class="bg-orange-50 font-medium text-center align-middle border-t border-orange-100">Tracheostomy care*<br><span class="text-gray-600 font-normal text-xs block mt-1">แพทย์ประจำบ้านปีที่ 2</span></td>
+                                <td class="bg-orange-50 font-medium text-center align-middle border-t border-orange-100">Basic audiology demonstration**<br><span class="text-gray-600 font-normal text-xs block mt-1">อ.กุลกันยา เจียรกิตติมศักดิ์<br>ภปร.12/ส.ธ.8</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Schedule Week 2 -->
+            <section id="week2" class="scroll-mt-10 mb-12">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-2 h-6 bg-olive-600 rounded-full"></div>
+                    <h3 class="mt-0 mb-0 border-none pb-0 text-xl font-bold text-gray-800">ตารางสัปดาห์ที่ 2</h3>
+                </div>
+                
+                <div class="overflow-x-auto border border-gray-200 rounded-xl shadow-sm">
+                    <table class="mb-0 min-w-[900px]">
+                        <thead>
+                            <tr>
+                                <th class="w-32 font-bold bg-olive-100">วัน/เวลา</th>
+                                <th class="font-bold bg-olive-50">จันทร์</th>
+                                <th class="font-bold bg-olive-50">อังคาร</th>
+                                <th class="font-bold bg-olive-50">พุธ</th>
+                                <th class="font-bold bg-olive-50">พฤหัสบดี</th>
+                                <th class="font-bold bg-olive-50">ศุกร์</th>
+                            </tr>
+                        </thead>
+                        <tbody class="align-top text-sm text-center">
+                            <tr>
+                                <td class="font-medium whitespace-nowrap bg-gray-50 text-center align-middle text-olive-800">08.00 – 09.00 น.</td>
+                                <td class="bg-purple-100 font-bold text-purple-900 text-base align-middle border-b border-purple-200">Teaching Round</td>
+                                <td class="bg-purple-100 font-bold text-purple-900 text-base align-middle border-b border-purple-200">Teaching Round</td>
+                                <td class="bg-purple-100 font-bold text-purple-900 text-base align-middle border-b border-purple-200">Teaching Round</td>
+                                <td class="bg-purple-100 font-bold text-purple-900 text-base align-middle border-b border-purple-200">Teaching Round</td>
+                                <td class="bg-purple-100 font-bold text-purple-900 text-base align-middle border-b border-purple-200">Teaching Round /<br><span class="text-red-600 mt-1 block bg-red-100 rounded px-2 py-0.5 mx-2 text-sm">สอบสัปดาห์ที่ 6</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium whitespace-nowrap bg-gray-50 text-center align-middle text-olive-800">09.00 – 12.00 น.<br><span class="text-gray-500 font-normal text-xs block mt-1">(OPD)</span></td>
+                                <td class="bg-blue-50 font-medium align-middle">OPD กลุ่ม 2+3</td>
+                                <td class="bg-blue-50 font-medium align-middle">OPD กลุ่ม 3+1</td>
+                                <td class="bg-blue-50 font-medium align-middle">OPD กลุ่ม 1+2</td>
+                                <td class="bg-blue-50 font-medium align-middle">OPD กลุ่ม 2+3</td>
+                                <td class="bg-blue-50 font-medium align-middle">OPD กลุ่ม 3+1 /<br><span class="text-red-600 font-bold block mt-1">สอบสัปดาห์ที่ 6</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium whitespace-nowrap bg-gray-50 text-center align-middle text-olive-800">9.00-12.00 น.<br><span class="text-gray-500 font-normal text-xs block mt-1">(OR)</span></td>
+                                <td class="bg-teal-50 font-medium align-middle border-t border-teal-100">OR กลุ่ม 1</td>
+                                <td class="bg-teal-50 font-medium align-middle border-t border-teal-100">OR กลุ่ม 2</td>
+                                <td class="bg-teal-50 font-medium align-middle border-t border-teal-100">OR กลุ่ม 3</td>
+                                <td class="bg-teal-50 font-medium align-middle border-t border-teal-100">OR กลุ่ม 1</td>
+                                <td class="bg-teal-50 font-medium align-middle border-t border-teal-100">OR กลุ่ม 2 /<br><span class="text-red-600 font-bold block mt-1">สอบสัปดาห์ที่ 6</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium whitespace-nowrap bg-gray-50 text-center align-middle text-olive-800">12.00 - 13.00 น.</td>
+                                <td colspan="5" class="text-center bg-gray-100 font-medium text-gray-500 text-base py-3 tracking-widest border-y border-gray-200">พักกลางวัน</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium whitespace-nowrap bg-gray-50 text-center align-middle text-olive-800">13.00 - 14.00 น.</td>
+                                <td rowspan="2" class="align-middle bg-amber-50 font-bold text-amber-900 text-base border-b border-amber-100">หัตถการ<br>Anterior Nasal Packing</td>
+                                <td class="text-left"><span class="font-bold text-xs text-olive-700 bg-olive-100 px-2 py-0.5 rounded">(13.00-13.30)</span><br>Deep Neck Infection (Q&A)<br><span class="text-gray-500 text-xs block mb-2 mt-1">ผศ. นพ.กฤษฎา โกวิทวิบูล</span><div class="bg-amber-100 p-1.5 text-center font-bold text-amber-900 mt-1 rounded-lg shadow-sm text-xs">หัตถการ Ear/Nose/Throat FB removal</div></td>
+                                <td class="text-left"><span class="font-bold text-xs text-olive-700 bg-olive-100 px-2 py-0.5 rounded">(13.00-13.30)</span><br>Hearing Loss and Peripheral Vertigo (Q&A)<br><span class="text-gray-500 text-xs block mb-2 mt-1">ผศ. ดร. พญ.นัตวรรณ อุทุมพฤกษ์พร</span><span class="font-bold text-xs text-olive-700 bg-olive-100 px-2 py-0.5 rounded">(13.30-14.00)</span><br>Head and neck cancer (Q&A)<br><span class="text-gray-500 text-xs block mt-1">รศ.นพ.ณปฎล ตั้งจาตุรนต์รัศมี</span></td>
+                                <td rowspan="2" class="align-middle bg-yellow-50 font-bold text-lg text-yellow-800 border-b border-yellow-100">EBM*</td>
+                                <td rowspan="2" class="align-middle text-gray-500 bg-gray-50 font-medium border-b border-gray-100">Record lecture / SDL</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium whitespace-nowrap bg-gray-50 text-center align-middle text-olive-800">14.00 - 15.00 น.</td>
+                                <td class="align-middle bg-amber-50 font-bold text-amber-900 border-t border-amber-100">หัตถการ Ear/Nose/Throat<br>FB removal</td>
+                                <td class="align-middle text-gray-500 bg-gray-50 font-medium border-t border-gray-100">Record lecture / SDL</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium whitespace-nowrap bg-gray-50 text-center align-middle text-olive-800">15.00 - 16.00 น.</td>
+                                <td class="align-middle bg-red-100 text-red-800 font-bold text-base">สอบหัตถการ<br>Anterior Nasal Packing</td>
+                                <td class="align-middle bg-amber-50 font-bold text-amber-900">หัตถการ Ear/Nose/Throat<br>FB removal</td>
+                                <td class="align-middle bg-orange-50 font-bold text-orange-900">ENT emergency*<br><span class="text-gray-600 font-medium block text-xs mt-1">แพทย์ประจำบ้านปีที่ 2</span></td>
+                                <td class="align-middle bg-yellow-50 font-bold text-lg text-yellow-800">EBM*</td>
+                                <td class="align-middle text-gray-500 bg-gray-50 font-medium">Record lecture / SDL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-gray-50 p-3 border-l-4 border-gray-400 rounded-r-xl mt-3 text-xs text-gray-600 font-medium">
+                    <p class="mb-1">* การสอนโดยแพทย์ประจำบ้านอาจมีการปรับเปลี่ยนเวลาได้ตามความเหมาะสม ให้นัดหมายกับแพทย์ประจำบ้านล่วงหน้า</p>
+                    <p class="mb-0">** ให้นัดหมายสถานที่ โดยตรวจสอบกับเจ้าหน้าที่เคาน์เตอร์ R ภปร.12 ภายหลังการเรียน OPD วันพุธ</p>
+                </div>
+            </section>
+
+            <hr class="my-12 border-t-2 border-dashed border-olive-100">
+
+            <!-- OR Schedule -->
+            <section id="or-schedule" class="scroll-mt-10 mb-12 pt-4">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-2 h-6 bg-olive-600 rounded-full"></div>
+                    <h3 class="mt-0 mb-0 border-none pb-0 text-xl font-bold text-gray-800">ตารางอาจารย์ดูแลนิสิตแพทย์ชั้นปีที่ 5 ห้องผ่าตัด</h3>
+                </div>
+                <p class="text-olive-700 font-medium mb-3 text-sm">อาคารภูมิสิริมังคลานุสรณ์ชั้น 8 โซน B</p>
+                
+                <div class="overflow-x-auto border border-gray-200 rounded-xl shadow-sm">
+                    <table class="mb-0 text-center min-w-[700px]">
+                        <thead>
+                            <tr>
+                                <th class="w-32 font-bold bg-olive-100">ของเดือน</th>
+                                <th class="font-bold bg-olive-50">สัปดาห์ที่ 1</th>
+                                <th class="font-bold bg-olive-50">สัปดาห์ที่ 2</th>
+                                <th class="font-bold bg-olive-50">สัปดาห์ที่ 3</th>
+                                <th class="font-bold bg-olive-50">สัปดาห์ที่ 4</th>
+                                <th class="font-bold bg-olive-50">สัปดาห์ที่ 5</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr>
+                                <td class="font-medium bg-gray-50 text-center align-middle text-olive-800">วันจันทร์</td>
+                                <td class="align-middle font-medium">อ. อวิกา<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 812</span></td>
+                                <td class="align-middle font-medium">อ. กฤษฎา<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 808</span></td>
+                                <td class="align-middle font-medium">อ. พิมรฎา<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 808</span></td>
+                                <td class="align-middle font-medium">อ. ณปฎล<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 807</span></td>
+                                <td class="align-middle font-medium">อ. พิมรฎา<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 807</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium bg-gray-50 text-center align-middle text-olive-800 border-t border-gray-200">วันอังคาร</td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. ธัชพงศ์<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 812</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. วรวรรธน์<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 807</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. เปรสุดา<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 808</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. เจษฎา<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 812</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. เปรมสุดา<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 808</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium bg-gray-50 text-center align-middle text-olive-800 border-t border-gray-200">วันพุธ</td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. วรุตม์<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 807</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. พีรดา<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 808</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. เปรม<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 812</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. วิศรุต<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 807</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. เปรม<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 812</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium bg-gray-50 text-center align-middle text-olive-800 border-t border-gray-200">วันพฤหัสบดี</td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. นทมณฑ์<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 807</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. ประภิศพันธุ์<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 807</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. วิศรุต<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 808</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. อวิกา<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 812</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. สุพินดา<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 812</span></td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium bg-gray-50 text-center align-middle text-olive-800 border-t border-gray-200">วันศุกร์</td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. ภาณินี<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 807</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. ขจร<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 812</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. ภาณินี<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 807</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. ประภิศพันธุ์<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 807</span></td>
+                                <td class="align-middle font-medium border-t border-gray-200">อ. ภาณินี<br><span class="inline-block bg-white border border-gray-200 px-1.5 py-0.5 rounded text-gray-600 text-xs mt-1">ห้อง 807</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="bg-olive-50 p-4 border border-olive-200 rounded-xl mt-4 shadow-sm flex gap-3">
+                    <i data-lucide="info" class="w-5 h-5 text-olive-600 shrink-0 mt-0.5"></i>
+                    <p class="text-sm text-gray-800 mb-0 font-medium">
+                        <strong class="text-olive-800">หมายเหตุ:</strong> ให้นิสิตไปพบอาจารย์ที่ได้รับมอบหมายให้สอนในห้องผ่าตัดในตารางด้านบน หากอาจารย์มีการแลกเปลี่ยนตารางผ่าตัดกับอาจารย์ท่านอื่น ๆ ให้นิสิตไปพบอาจารย์ตามห้องในวงเล็บแทน
                     </p>
-                    <p class="text-xs text-gray-400 mb-0 md:text-right">&copy; 2026 ภาควิชาโสต ศอ นาสิกวิทยา</p>
                 </div>
-            </div>
+            </section>
+
+            <hr class="my-12 border-t-2 border-dashed border-olive-100">
+
+            <!-- Section: Resident List Embed -->
+            <section id="resident-list" class="scroll-mt-10 mb-12 pt-4">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-2 h-8 bg-olive-600 rounded-full"></div>
+                        <h2 class="mt-0 mb-0 border-none pb-0 text-2xl">รายชื่อของแพทย์ประจำบ้านที่ดูแลนิสิต</h2>
+                    </div>
+                    <a href="https://docs.google.com/spreadsheets/d/1kuprKgjmtT0Y4iFwmvLLT09rGQnEHaIDLlkMEO-DJrU/edit?usp=sharing" target="_blank" class="flex items-center gap-2 text-base bg-olive-600 hover:bg-olive-700 text-white px-5 py-2.5 rounded-xl font-bold transition-colors shadow-sm shrink-0">
+                        <i data-lucide="external-link" class="w-5 h-5"></i> เปิดดูแบบเต็มจอ
+                    </a>
+                </div>
+                
+                <!-- กำหนดความสูงพรีวิว -->
+                <div class="w-full h-[500px] md:h-[700px] rounded-2xl overflow-hidden border-2 border-olive-100 shadow-sm bg-gray-50 relative opacity-95 hover:opacity-100 transition-opacity">
+                    <!-- ใช้ /preview สำหรับแสดงผล Google Sheets -->
+                    <iframe src="https://docs.google.com/spreadsheets/d/1kuprKgjmtT0Y4iFwmvLLT09rGQnEHaIDLlkMEO-DJrU/preview" class="w-full h-full border-none" allow="autoplay"></iframe>
+                </div>
+            </section>
+            
         </div>
-    </footer>
+    </div>
 
     <!-- Initialize Scripts -->
     <script>
-        // Initialize Lucide Icons
+        // 1. Initialize Lucide Icons
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
         } else {
             console.error('Lucide library could not be loaded.');
         }
+
+        // 2. Robust Smooth Scrolling Script for TOC Links
+        // ออกแบบมาเพื่อบังคับให้เบราว์เซอร์ทุกประเภท (รวมถึง In-app browser) เลื่อนหน้าจอได้ถูกต้อง
+        document.addEventListener('DOMContentLoaded', () => {
+            const tocLinks = document.querySelectorAll('.toc-link');
+            
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // ป้องกันพฤติกรรมกระโดดแบบปกติของ <a>
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // ใช้วิธี scrollIntoView ที่มีความเสถียรสูงบนมือถือ
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // แอบเปลี่ยน URL ด้านบนโดยไม่ให้หน้ากระตุก เพื่อเผื่อการกด Back
+                        if (history.pushState) {
+                            history.pushState(null, null, targetId);
+                        } else {
+                            window.location.hash = targetId;
+                        }
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
