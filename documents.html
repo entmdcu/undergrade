@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เอกสารประกอบการเรียนและ VDO</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        olive: {
+                            50: '#f5f7f2',
+                            100: '#e7ede0',
+                            200: '#d0dbc3',
+                            300: '#b1c39e',
+                            400: '#90a676',
+                            500: '#728c55',
+                            600: '#586f40', // Base Olive
+                            700: '#455734',
+                            800: '#38462b',
+                            900: '#303b26',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f9faf7; 
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #728c55; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #586f40; 
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased pb-16">
+
+    <!-- Page Header -->
+    <div class="pt-12 pb-12 bg-olive-50 border-b border-olive-100 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-olive-200 rounded-full blur-3xl opacity-40 -translate-y-1/2 translate-x-1/3"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">เอกสารประกอบการเรียน<br><span class="text-olive-600">และ VDO</span></h1>
+            <p class="text-xl text-olive-700 font-medium">ภาควิชาโสต ศอ นาสิกวิทยา คณะแพทยศาสตร์ จุฬาฯ</p>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Section 1: Logbook -->
+        <section class="mb-12">
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-olive-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="bg-olive-100 p-3 rounded-xl">
+                        <i data-lucide="file-signature" class="w-8 h-8 text-olive-700"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900 mt-0 mb-0">เอกสาร Logbook (ใบเซ็นชื่อ)</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                    <!-- Text & Buttons -->
+                    <div>
+                        <div class="bg-gray-50 border-l-4 border-olive-500 p-5 rounded-r-xl mb-6">
+                            <p class="text-gray-700 font-medium leading-relaxed mb-4">
+                                ขอให้นิสิตแพทย์ <strong class="text-olive-800">ดาวน์โหลดเอกสาร Logbook (ใบเซ็นชื่อ)</strong> เพื่อนำไปให้อาจารย์เซ็นต์ในแต่ละคาบที่เรียน 
+                            </p>
+                            <p class="text-gray-700 font-medium leading-relaxed mb-0">
+                                และเมื่อเสร็จสิ้น <strong class="text-olive-800">โปรดเลือกโฟลเดอร์ของกลุ่มตนเอง</strong> เพื่ออัปโหลดใบเช็คชื่อพร้อมลายเซ็นครบทุกคาบ โดยขอให้ส่งให้ตรงกลุ่มตามโฟลเดอร์ที่แยกไว้
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <a href="https://drive.google.com/file/d/1c-0YuzPG1fdeEvGXtlL8InzI62J57W6j/view" target="_blank" class="flex items-center justify-center gap-2 bg-olive-600 hover:bg-olive-700 text-white px-6 py-3.5 rounded-xl font-bold transition-colors shadow-sm w-full text-lg">
+                                <i data-lucide="download" class="w-5 h-5"></i> ดาวน์โหลดใบ Logbook
+                            </a>
+                            <a href="https://drive.google.com/drive/folders/1CQhfvOET2L5Z2w5xBeR-OxPh7w1Vmzse?usp=drive_link" target="_blank" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3.5 rounded-xl font-bold transition-colors shadow-sm w-full text-lg">
+                                <i data-lucide="upload-cloud" class="w-5 h-5"></i> ส่งเอกสาร Logbook (Google Drive)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Preview Iframe -->
+                    <div class="bg-gray-50 p-2 rounded-2xl border border-gray-200 h-[300px] md:h-[350px]">
+                        <div class="w-full h-full rounded-xl overflow-hidden relative opacity-95 hover:opacity-100 transition-opacity">
+                            <iframe src="https://drive.google.com/file/d/1c-0YuzPG1fdeEvGXtlL8InzI62J57W6j/preview" class="w-full h-full border-none" allow="autoplay">
+                                <div class="text-center p-8 mt-10">
+                                    <p class="text-gray-600 mb-4">พรีวิวเอกสารไม่พร้อมใช้งาน</p>
+                                </div>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Slides -->
+        <section class="mb-12">
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-olive-100 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex-1">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="bg-amber-100 p-2.5 rounded-xl">
+                            <i data-lucide="presentation" class="w-7 h-7 text-amber-700"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900 mt-0 mb-0">Slide การสอนของอาจารย์</h2>
+                    </div>
+                    <p class="text-gray-600 font-medium leading-relaxed mb-2">
+                        ข้อมูลที่ได้รับมาเป็นสิ่งที่อาจารย์ส่งไว้ให้ <strong class="text-amber-700">หากไม่ตรงกับเวอร์ชั่นที่เรียน สามารถขอหรือสอบถามอาจารย์ในคาบได้</strong>
+                    </p>
+                    <p class="text-sm text-gray-400 font-medium">(อัพเดทล่าสุดปีการศึกษา 2568)</p>
+                </div>
+                <div class="w-full md:w-auto shrink-0">
+                    <a href="https://drive.google.com/drive/folders/1w8Jo3SVd1ApAWgtEo3OdSpWqsWNmMKPf" target="_blank" class="flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-xl font-bold transition-colors shadow-sm w-full text-lg">
+                        <i data-lucide="folder-open" class="w-5 h-5"></i> เปิดดู Slide การสอน
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: E-Learning (VDO) -->
+        <section>
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-olive-100">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="bg-purple-100 p-3 rounded-xl">
+                        <i data-lucide="monitor-play" class="w-8 h-8 text-purple-700"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900 mt-0 mb-0">E-Learning (Online Lecture)</h2>
+                </div>
+
+                <div class="bg-purple-50 border-l-4 border-purple-500 p-5 md:p-6 rounded-r-xl mb-8 shadow-sm">
+                    <p class="text-gray-900 text-xl md:text-2xl font-semibold leading-relaxed mb-3">
+                        📌 ในปีการศึกษานี้ บางคาบเรียนจะจัดการสอนในรูปแบบ <span class="text-purple-700 font-bold text-2xl md:text-3xl">Q&A</span>
+                    </p>
+                    <p class="text-gray-800 text-lg md:text-xl font-medium leading-relaxed mb-0">
+                        นิสิต <span class="text-red-600 font-bold underline decoration-red-300 underline-offset-4">จำเป็นต้องดู Online Lecture ล่วงหน้าก่อนเข้าเรียนเสมอ</span><br>
+                        <span class="text-purple-800 text-base md:text-lg mt-3 inline-block bg-purple-100 px-3 py-1.5 rounded-lg font-medium">(สามารถตรวจสอบรายวิชาที่ต้องดูวิดีโอล่วงหน้าได้จากตารางเรียน)</span>
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Mandatory VDO -->
+                    <div class="bg-red-50 border-2 border-red-200 rounded-2xl p-6 relative flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
+                        <div class="absolute -top-3 -right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                            ต้องดูก่อนขึ้นเรียน ENT!
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-red-800 mb-2 flex items-center gap-2">
+                                <i data-lucide="alert-circle" class="w-5 h-5"></i> VDO ตรวจร่างกาย (Physical Exam)
+                            </h3>
+                            <p class="text-red-700 font-medium text-sm mb-6">
+                                นิสิตจะต้องดู VDO นี้ มาก่อนขึ้นเรียน ENT ทุกครั้ง
+                            </p>
+                        </div>
+                        <a href="https://www.medumore.org/course/Chula-bedside-skill-ENT-PhysicalExamination" target="_blank" class="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-5 py-3 rounded-xl font-bold transition-colors w-full">
+                            <i data-lucide="play-circle" class="w-5 h-5"></i> เข้าชม VDO 
+                        </a>
+                    </div>
+
+                    <!-- General VDOs -->
+                    <div class="bg-white border-2 border-gray-200 rounded-2xl p-6 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow hover:border-purple-300">
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
+                                <i data-lucide="video" class="w-5 h-5 text-purple-600"></i> รวม VDO Online Lecture
+                            </h3>
+                            <p class="text-gray-600 font-medium text-sm mb-6">
+                                วีดีโอการเรียนการสอน (E-Learning) ในหัวข้ออื่นๆ สำหรับรายวิชาโสต ศอ นาสิกวิทยา
+                            </p>
+                        </div>
+                        <a href="https://www.medumore.org/category/course?keyword=Otolaryngology%20for%20Medical%20Students" target="_blank" class="flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-900 text-white px-5 py-3 rounded-xl font-bold transition-colors w-full">
+                            <i data-lucide="external-link" class="w-5 h-5"></i> ไปที่หน้าคลัง VDO
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Initialize Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        } else {
+            console.error('Lucide library could not be loaded.');
+        }
+    </script>
+</body>
+</html>
